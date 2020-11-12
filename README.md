@@ -1,52 +1,78 @@
-# README Template
+# The Shoe Store
 
-Below is a template provided for use when building your README file for students.
+This project will consist of five screens. You don't have to create a shoe store, you can use any other item as long as you create the following screens. You will be creating:
 
-# Project Title
-
-Project description goes here.
+1. Login screen: Email and password fields and labels plus create and login buttons
+2. Welcome onboarding screen
+3. Instructions onboarding screen
+4. Shoe Listing screen
+5. Shoe Detail screen for adding a new shoe
 
 ## Getting Started
 
-Instructions for how to get a copy of the project running on your local machine.
+Open the starter project in the latest stable version of Android Studio.
 
-### Dependencies
+Open the starter project in Android Studio
 
-```
-Examples here
-```
+##Steps
 
-### Installation
+1. Open the starter project in Android Studio
 
-Step by step explanation of how to get a dev environment running.
+2. Add the navigation libraries to the app build.gradle file
 
-List out the steps
+3. Add the safe-arg plugin to the main and app build.gradle file
 
-```
-Give an example here
-```
+4. Create a new navigation xml file
 
-## Testing
+5. Create a new Login destination.
 
-Explain the steps needed to run any automated tests
+   * Include email and password labels 
 
-### Break Down Tests
+   - Include email and password fields
+   - Create buttons for creating a new login and logging in with an existing account
+   - Clicking either button should navigate to the Welcome Screen.
 
-Explain what each test does and why
+6. Create a new Welcome screen destination that includes:
 
-```
-Examples here
-```
-## Project Instructions
+   * A new layout
+   * At least 2 textviews
+   * A navigation button with actions to navigate to the instructions screen
 
-This section should contain all the student deliverables for this project.
+7. Create a new Instruction destination that includes:
 
-## Built With
+   * A new layout
+   * At least 2 textviews
+   * A navigation button with actions to navigate to the shoe list screen
 
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
+8. Create a class that extends ViewModel
 
-Include all items used to build project.
+   *  Use a LiveData field that returns the list of shoes
 
-## License
+9. Create a new Shoe List destination that includes:
+
+   * A new layout
+   * A ScrollView
+   * A LinearLayout for Shoe Items
+   * A FloatingActionButton with an action to navigate to the shoe detail screen
+
+10. In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration.
+
+11. Create a new Shoe Detail destination that includes:
+
+    * A new layout
+    * A TextView label and EditView for the
+      * Shoe Name
+      * Company
+      * Shoe Size
+      * Description
+    * A Cancel button with an action to navigate back to the shoe list screen
+    * A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
+
+12. Make sure you can’t go back to onboarding screens
+
+13. In the Shoe List screen:
+
+    * Use an Activity level ViewModel to hold a list of Shoes (use by activityViewModels)
+    * Observe the shoes variable from the ViewModel
+    * Use DataBindingUtil to inflate the shoe_list layout
+    * Add a new layout item into the scrollview for each shoe.
