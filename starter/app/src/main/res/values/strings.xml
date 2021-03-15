@@ -6,8 +6,16 @@
     <string name="action_sign_in">Sign</string>
     <string name="action_register">Register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
+    <string name="welcome">Welcome!</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="hello_employee">Hello, fellow wizard.
+        Pay attention to the instructions!
+        Are you ready?</string>
+    <string name="ready">Ready!</string>
+    <string name="revelus">Revelus detalis</string>
+    <string name="instructions">Add the new ones manually by pressing the + button and entering the data.
+    Important data is: length, type of wood and core material.</string>
+    <string name="cast_spell">Cast the spell to reveal details about the wands in the store.</string>
 </resources>
