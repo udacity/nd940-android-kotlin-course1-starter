@@ -32,5 +32,14 @@
         android:id="@+id/instructionsFragment"
         android:name="com.udacity.wandstore.InstructionsFragment"
         android:label="fragment_instructions"
-        tools:layout="@layout/fragment_instructions" />
+        tools:layout="@layout/fragment_instructions" >
+        <action
+            android:id="@+id/action_instructionsFragment_to_wandListFragment"
+            app:destination="@id/wandListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wandListFragment"
+        android:name="com.udacity.wandstore.ui.wandlist.WandListFragment"
+        android:label="fragment_wand_list"
+        tools:layout="@layout/fragment_wand_list" />
 </navigation>
