@@ -39,6 +39,7 @@ class WandListFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding: FragmentWandListBinding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_wand_list, container, false)
+        binding.floatingActionButton
         return binding.root
     }
 

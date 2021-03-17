@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.udacity.wandstore.databinding.FragmentLoginBinding
 import com.udacity.wandstore.R
 
@@ -40,6 +41,20 @@ class LoginFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_login, container, false)
+
+        binding.loginButton.setOnClickListener {
+            //todo check if user exists
+            //if not, dialog asking for register
+            //else, proceeds
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+        }
+
+        binding.registerButton.setOnClickListener {
+            //todo check if user exists
+            //if it does, dialog asking for register
+            //else, proceeds
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+        }
         return binding.root
     }
 
