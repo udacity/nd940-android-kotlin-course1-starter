@@ -20,4 +20,14 @@
     <string name="cast_spell">Cast the spell to reveal details about the wands in the store.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_label">Name</string>
+    <string name="size_label">Size</string>
+    <string name="size_hint">Size in cm</string>
+    <string name="wood_label">Type of wood</string>
+    <string name="core_label">Type of core</string>
+    <string name="wood_hint">i.e., oak, maple, cherry</string>
+    <string name="core_hint">i.e., phoenix feather, unicorn tail-hair...</string>
+    <string name="name_hint">Name</string>
+    <string name="cancel_button_label">Cancel</string>
+    <string name="save_button_label">Enter</string>
 </resources>

@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import com.udacity.wandstore.databinding.FragmentLoginBinding
 import com.udacity.wandstore.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -18,6 +20,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class LoginFragment : Fragment() {
+    private lateinit var _binding: FragmentLoginBinding
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,7 +38,9 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        val binding: FragmentLoginBinding = DataBindingUtil.inflate(inflater,
+            R.layout.fragment_login, container, false)
+        return binding.root
     }
 
     companion object {
