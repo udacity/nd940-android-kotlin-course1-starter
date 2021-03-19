@@ -1,15 +1,20 @@
 package com.udacity.wandstore.ui.login
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.udacity.wandstore.databinding.FragmentLoginBinding
 import com.udacity.wandstore.R
+import com.udacity.wandstore.databinding.FragmentLoginBinding
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,10 +27,14 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class LoginFragment : Fragment() {
-    private lateinit var _binding: FragmentLoginBinding
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private var hasUsername = false
+    private var hasPassword = false
+    private lateinit var loginButton: Button
+    private lateinit var registerButton: Button
+    private lateinit var viewModel: LoginViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,29 +50,58 @@ class LoginFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(inflater,
-            R.layout.fragment_login, container, false)
+                R.layout.fragment_login, container, false)
+        loginButton = binding.loginButton
+        registerButton = binding.registerButton
 
-        binding.loginButton.setOnClickListener {
-            //todo check if user exists
-            //if not, dialog asking for register
-            //else, proceeds
+        binding.username.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(arg0: Editable) {
+                hasUsername = binding.username.text.length > 3
+                enableIfReady()
+            }
+
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
+        })
+
+        binding.password.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(arg0: Editable) {
+                hasPassword = binding.password.text.length > 3
+                enableIfReady()
+            }
+
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
+        })
+
+        loginButton.setOnClickListener {
+            viewModel.onLogin()
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
 
-        binding.registerButton.setOnClickListener {
-            //todo check if user exists
-            //if it does, dialog asking for register
-            //else, proceeds
+        registerButton.setOnClickListener {
+            viewModel.onLogin()
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
+
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+        binding.loginViewModel = viewModel
+        binding.lifecycleOwner = this
+
         return binding.root
     }
 
+    private fun enableIfReady() {
+        if (hasUsername && hasPassword) {
+            loginButton.isEnabled = true
+            registerButton.isEnabled = true
+        }
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

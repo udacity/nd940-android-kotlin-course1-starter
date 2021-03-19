@@ -6,26 +6,34 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.udacity.wandstore.databinding.ActivityMainBinding
+import com.udacity.wandstore.ui.login.LoginViewModel
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
+    private lateinit var viewModel: LoginViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val bindingUtil =  DataBindingUtil.setContentView<ActivityMainBinding>(this,
+        val binding =  DataBindingUtil.setContentView<ActivityMainBinding>(this,
                 R.layout.activity_main)
         Timber.plant(Timber.DebugTree())
         navController = this.findNavController(R.id.myNavHostFragment)
         val appBarConfiguration = AppBarConfiguration(navController.graph)
-        val toolbar: Toolbar = bindingUtil.toolbar
+        val toolbar: Toolbar = binding.toolbar
         NavigationUI.setupWithNavController(toolbar, navController, appBarConfiguration)
         setSupportActionBar(toolbar)
+
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+        binding.loginViewModel = viewModel
+        binding.lifecycleOwner = this
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -34,6 +42,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        viewModel.onLogout()
         return NavigationUI.onNavDestinationSelected(item, navController)
                 || super.onOptionsItemSelected(item)
     }
