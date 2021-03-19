@@ -13,7 +13,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.udacity.wandstore.ui.login.LoginFragment"
-        android:label="fragment_login"
+        android:label="Login"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
@@ -22,7 +22,7 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.udacity.wandstore.WelcomeFragment"
-        android:label="fragment_welcome"
+        android:label="Welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
             android:id="@+id/action_welcomeFragment_to_instructionsFragment"
@@ -31,7 +31,7 @@
     <fragment
         android:id="@+id/instructionsFragment"
         android:name="com.udacity.wandstore.InstructionsFragment"
-        android:label="fragment_instructions"
+        android:label="Instructions"
         tools:layout="@layout/fragment_instructions" >
         <action
             android:id="@+id/action_instructionsFragment_to_wandListFragment"
@@ -40,7 +40,7 @@
     <fragment
         android:id="@+id/wandListFragment"
         android:name="com.udacity.wandstore.ui.wandlist.WandListFragment"
-        android:label="fragment_wand_list"
+        android:label="Wand Inventory"
         tools:layout="@layout/fragment_wand_list" >
         <action
             android:id="@+id/action_wandListFragment_to_wandDetailFragment"
@@ -49,6 +49,10 @@
     <fragment
         android:id="@+id/wandDetailFragment"
         android:name="com.udacity.wandstore.WandDetailFragment"
-        android:label="fragment_wand_detail"
-        tools:layout="@layout/fragment_wand_detail" />
+        android:label="Wand Details"
+        tools:layout="@layout/fragment_wand_detail" >
+        <action
+            android:id="@+id/action_wandDetailFragment_to_wandListFragment"
+            app:destination="@id/wandListFragment" />
+    </fragment>
 </navigation>
