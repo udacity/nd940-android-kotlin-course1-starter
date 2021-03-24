@@ -40,13 +40,10 @@ class WandListFragment : Fragment() {
         sharedViewModel.wandList.observe(viewLifecycleOwner, Observer { wandList ->
             wandList.forEach { wand ->
                 Log.d("WandList", "wand is $wand")
-                //inflate item layout
+                //inflate item layout and add view
                 val itemBinding: FragmentWandListItemBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_wand_list_item, container, false)
                 itemBinding.wand = wand
                 binding.listLayout.addView(itemBinding.root)
-//                wandDetailBinding.wand = wand
-//                binding.scrollView2.addView(wandDetailBinding.root)
-                //add view
             }
         })
 

@@ -50,6 +50,7 @@
         tools:layout="@layout/fragment_wand_detail" >
         <action
             android:id="@+id/action_wandDetailFragment_to_wandListFragment"
-            app:destination="@id/wandListFragment" />
+            app:destination="@id/wandListFragment"
+            app:popUpTo="@id/loginFragment"/>
     </fragment>
 </navigation>
