@@ -24,12 +24,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding =  DataBindingUtil.setContentView<ActivityMainBinding>(this,
                 R.layout.activity_main)
-        Timber.plant(Timber.DebugTree())
+        val toolbar: Toolbar = binding.toolbar
+        setSupportActionBar(toolbar)
+
         navController = this.findNavController(R.id.myNavHostFragment)
         val appBarConfiguration = AppBarConfiguration(navController.graph)
-        val toolbar: Toolbar = binding.toolbar
         NavigationUI.setupWithNavController(toolbar, navController, appBarConfiguration)
-        setSupportActionBar(toolbar)
 
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         binding.loginViewModel = viewModel
@@ -45,5 +45,9 @@ class MainActivity : AppCompatActivity() {
         viewModel.onLogout()
         return NavigationUI.onNavDestinationSelected(item, navController)
                 || super.onOptionsItemSelected(item)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp()
     }
 }

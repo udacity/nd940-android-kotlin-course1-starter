@@ -5,11 +5,6 @@
     android:id="@+id/navigation.xml"
     app:startDestination="@id/loginFragment">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.udacity.wandstore.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.udacity.wandstore.ui.login.LoginFragment"
@@ -26,7 +21,8 @@
         tools:layout="@layout/fragment_welcome" >
         <action
             android:id="@+id/action_welcomeFragment_to_instructionsFragment"
-            app:destination="@id/instructionsFragment" />
+            app:destination="@id/instructionsFragment"
+            app:popUpTo="@id/loginFragment"/>
     </fragment>
     <fragment
         android:id="@+id/instructionsFragment"
@@ -35,7 +31,8 @@
         tools:layout="@layout/fragment_instructions" >
         <action
             android:id="@+id/action_instructionsFragment_to_wandListFragment"
-            app:destination="@id/wandListFragment" />
+            app:destination="@id/wandListFragment"
+            app:popUpTo="@id/loginFragment"/>
     </fragment>
     <fragment
         android:id="@+id/wandListFragment"

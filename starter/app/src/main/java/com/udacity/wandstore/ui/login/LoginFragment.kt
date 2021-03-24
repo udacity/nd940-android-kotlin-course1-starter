@@ -27,9 +27,6 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class LoginFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
     private var hasUsername = false
     private var hasPassword = false
     private lateinit var loginButton: Button
@@ -38,10 +35,6 @@ class LoginFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
         setHasOptionsMenu(true)
     }
 
@@ -58,26 +51,8 @@ class LoginFragment : Fragment() {
                 R.layout.fragment_login, container, false)
         loginButton = binding.loginButton
         registerButton = binding.registerButton
-
-        binding.username.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(arg0: Editable) {
-                hasUsername = binding.username.text.length > 3
-                enableIfReady()
-            }
-
-            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
-        })
-
-        binding.password.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(arg0: Editable) {
-                hasPassword = binding.password.text.length > 3
-                enableIfReady()
-            }
-
-            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
-        })
+        loginButton.isEnabled = true
+        registerButton.isEnabled = true
 
         loginButton.setOnClickListener {
             viewModel.onLogin()
@@ -94,31 +69,5 @@ class LoginFragment : Fragment() {
         binding.lifecycleOwner = this
 
         return binding.root
-    }
-
-    private fun enableIfReady() {
-        if (hasUsername && hasPassword) {
-            loginButton.isEnabled = true
-            registerButton.isEnabled = true
-        }
-    }
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment LoginFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            LoginFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
     }
 }
