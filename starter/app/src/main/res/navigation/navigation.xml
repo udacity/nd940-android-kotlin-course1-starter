@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment" />
+            app:destination="@id/welcomeFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
@@ -22,7 +26,11 @@
         <action
             android:id="@+id/action_welcomeFragment_to_instructionsFragment"
             app:destination="@id/instructionsFragment"
-            app:popUpTo="@id/loginFragment"/>
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/instructionsFragment"
@@ -32,7 +40,11 @@
         <action
             android:id="@+id/action_instructionsFragment_to_wandListFragment"
             app:destination="@id/wandListFragment"
-            app:popUpTo="@id/loginFragment"/>
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/wandListFragment"
@@ -41,7 +53,11 @@
         tools:layout="@layout/fragment_wand_list" >
         <action
             android:id="@+id/action_wandListFragment_to_wandDetailFragment"
-            app:destination="@id/wandDetailFragment" />
+            app:destination="@id/wandDetailFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
         android:id="@+id/wandDetailFragment"
@@ -51,6 +67,10 @@
         <action
             android:id="@+id/action_wandDetailFragment_to_wandListFragment"
             app:destination="@id/wandListFragment"
-            app:popUpTo="@id/loginFragment"/>
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
 </navigation>
