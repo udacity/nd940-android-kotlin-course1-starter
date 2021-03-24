@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.udacity.wandstore.WelcomeFragment"
+        android:name="com.udacity.wandstore.ui.onboarding.WelcomeFragment"
         android:label="Welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/instructionsFragment"
-        android:name="com.udacity.wandstore.InstructionsFragment"
+        android:name="com.udacity.wandstore.ui.onboarding.InstructionsFragment"
         android:label="Instructions"
         tools:layout="@layout/fragment_instructions" >
         <action

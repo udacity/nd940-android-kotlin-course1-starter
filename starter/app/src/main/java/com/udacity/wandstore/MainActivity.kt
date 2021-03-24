@@ -13,7 +13,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.udacity.wandstore.databinding.ActivityMainBinding
 import com.udacity.wandstore.ui.login.LoginViewModel
-import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
 

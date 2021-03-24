@@ -15,20 +15,7 @@ import androidx.navigation.fragment.findNavController
 import com.udacity.wandstore.R
 import com.udacity.wandstore.databinding.FragmentLoginBinding
 
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [LoginFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class LoginFragment : Fragment() {
-    private var hasUsername = false
-    private var hasPassword = false
     private lateinit var loginButton: Button
     private lateinit var registerButton: Button
     private lateinit var viewModel: LoginViewModel
@@ -45,7 +32,7 @@ class LoginFragment : Fragment() {
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(inflater,
                 R.layout.fragment_login, container, false)

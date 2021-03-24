@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.wandstore.databinding.FragmentWandDetailBinding
 import com.udacity.wandstore.models.Wand
@@ -20,7 +19,7 @@ class WandDetailFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         val binding: FragmentWandDetailBinding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_wand_detail, container, false)

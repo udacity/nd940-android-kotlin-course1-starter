@@ -1,4 +1,4 @@
-package com.udacity.wandstore
+package com.udacity.wandstore.ui.onboarding
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,25 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
+import com.udacity.wandstore.R
+import com.udacity.wandstore.ui.onboarding.WelcomeFragmentDirections
 import com.udacity.wandstore.databinding.FragmentWelcomeBinding
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [WelcomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class WelcomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         val binding: FragmentWelcomeBinding = DataBindingUtil.inflate(inflater,
-            R.layout.fragment_welcome, container, false)
+                R.layout.fragment_welcome, container, false)
 
         binding.readyButton.setOnClickListener {
             findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment())

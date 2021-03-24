@@ -13,7 +13,7 @@
     android:paddingRight="@dimen/fragment_horizontal_margin"
     android:paddingBottom="@dimen/fragment_vertical_margin"
     android:background="@color/colorBackground"
-    tools:context=".WelcomeFragment">
+    tools:context=".ui.onboarding.WelcomeFragment">
 
     <TextView
         android:id="@+id/welcome_text"
