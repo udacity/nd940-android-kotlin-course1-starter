@@ -6,16 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.wandstore.databinding.FragmentWandDetailBinding
-import com.udacity.wandstore.ui.wandlist.WandListFragmentDirections
+import com.udacity.wandstore.models.Wand
+import com.udacity.wandstore.models.WandListViewModel
 
-/**
- * A simple [Fragment] subclass.
- * Use the [WandDetailFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class WandDetailFragment : Fragment() {
+    private val sharedViewModel: WandListViewModel by activityViewModels()
+    private lateinit var wand: Wand
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,7 +29,12 @@ class WandDetailFragment : Fragment() {
             findNavController().navigate(WandDetailFragmentDirections.actionWandDetailFragmentToWandListFragment())
         }
 
+        binding.wandListViewModel = sharedViewModel
+        binding.lifecycleOwner = this
+
         binding.saveButton.setOnClickListener {
+            wand = Wand(binding.nameEntry.text.toString(), binding.sizeEntry.text.toString().toDouble(), binding.woodEntry.text.toString(), binding.coreEntry.text.toString())
+            sharedViewModel.addWand(wand)
             findNavController().navigate(WandDetailFragmentDirections.actionWandDetailFragmentToWandListFragment())
         }
         return binding.root
