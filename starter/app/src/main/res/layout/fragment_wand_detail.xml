@@ -11,7 +11,9 @@
             name="wandListViewModel"
             type="com.udacity.wandstore.models.WandListViewModel"/>
     </data>
-
+    <!--Using Constraint layout to align buttons and text fields centered vertically, with specific
+    margin to borders of screen. Also, views are positioned in relation to each other, as an example
+    each EditText has a TextView as a baseline.-->
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"

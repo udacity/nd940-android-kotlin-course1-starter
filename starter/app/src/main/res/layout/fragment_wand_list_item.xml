@@ -7,7 +7,7 @@
             name="wand"
             type="com.udacity.wandstore.models.Wand" />
     </data>
-
+    <!--Using Constraint layout because views are positioned in relation to each other. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

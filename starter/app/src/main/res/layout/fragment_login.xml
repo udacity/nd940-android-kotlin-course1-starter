@@ -7,6 +7,8 @@
             name="loginViewModel"
             type="com.udacity.wandstore.ui.login.LoginViewModel" />
     </data>
+    <!--Using Constraint layout to align buttons and text fields centered vertically, with specific
+    margin to borders of screen. Also, views are positioned in relation to each other. -->
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/container"
     android:layout_width="match_parent"
