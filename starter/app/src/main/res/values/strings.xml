@@ -16,11 +16,9 @@
         Are you ready?</string>
     <string name="ready">Ready!</string>
     <string name="revelus">Revelus detalis</string>
-    <string name="instructions">Add the new ones manually by pressing the + button and entering the data.
+    <string name="instructions">Add the new wands manually by pressing the + button and entering the data.
     Important data is: length, type of wood and core material.</string>
     <string name="cast_spell">Cast the spell to reveal details about the wands in the store.</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="name_label">Name</string>
     <string name="size_label">Size</string>
     <string name="size_hint">Size in cm</string>
@@ -31,4 +29,8 @@
     <string name="name_hint">Name</string>
     <string name="cancel_button_label">Cancel</string>
     <string name="save_button_label">Enter</string>
+    <string name="enter_new_wand_details">Enter new wand details</string>
+    <string name="length_item_text">%s cm</string>
+    <string name="wood_item_text">Wood %s</string>
+    <string name="core_item_text">Core %s</string>
 </resources>

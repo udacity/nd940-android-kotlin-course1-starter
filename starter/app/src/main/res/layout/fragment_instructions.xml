@@ -12,10 +12,12 @@
     android:paddingTop="@dimen/fragment_vertical_margin"
     android:paddingRight="@dimen/fragment_horizontal_margin"
     android:paddingBottom="@dimen/fragment_vertical_margin"
+    android:background="@color/colorBackground"
     tools:context=".InstructionsFragment">
 
     <TextView
         android:id="@+id/welcome_text"
+        style="@style/griffindorText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -26,6 +28,7 @@
 
     <TextView
         android:id="@+id/instructionsText"
+        style="@style/griffindorText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -37,6 +40,7 @@
 
     <Button
         android:id="@+id/startButton"
+        style="@style/griffindor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"

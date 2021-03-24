@@ -18,13 +18,12 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackgroundLight"
     tools:context=".WandDetailFragment">
 
     <TextView
         android:id="@+id/name_label_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        style="@style/wand_detail_label"
         android:text="@string/name_label"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,14 +31,17 @@
 
     <EditText
         android:id="@+id/name_entry"
+        style="@style/wand_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/name_hint"
         android:autofillHints="username"
+        android:ems="10"
+        android:hint="@string/name_hint"
+        android:inputType="textPersonName"
         android:text="@={wand.name}"
+        android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintBaseline_toBaselineOf="@+id/name_label_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.745"
@@ -47,16 +49,19 @@
 
     <TextView
         android:id="@+id/size_label_text"
+        style="@style/wand_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/size_label"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_label_text" />
 
     <EditText
         android:id="@+id/size_entry"
+        style="@style/wand_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -65,6 +70,8 @@
         android:importantForAutofill="no"
         android:inputType="numberDecimal"
         android:text="@={`` + wand.length}"
+        android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintBaseline_toBaselineOf="@+id/size_label_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.769"
@@ -72,41 +79,49 @@
 
     <TextView
         android:id="@+id/wood_label_text"
+        style="@style/wand_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/wood_label"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/size_label_text" />
 
     <EditText
         android:id="@+id/wood_entry"
+        style="@style/wand_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/wood_hint"
         android:importantForAutofill="no"
+        android:inputType="textPersonName"
         android:text="@={wand.wood}"
+        android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintBaseline_toBaselineOf="@+id/wood_label_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/wood_label_text" />
 
     <TextView
         android:id="@+id/core_label_text"
+        style="@style/wand_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/core_label"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wood_label_text" />
 
     <EditText
         android:id="@+id/core_entry"
+        style="@style/wand_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -116,6 +131,8 @@
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:text="@={wand.core}"
+        android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintBaseline_toBaselineOf="@+id/core_label_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.56"
@@ -123,6 +140,7 @@
 
     <Button
         android:id="@+id/saveButton"
+        style="@style/griffindor"
         android:layout_width="182dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -132,6 +150,7 @@
 
     <Button
         android:id="@+id/cancelButton"
+        style="@style/griffindor"
         android:layout_width="181dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

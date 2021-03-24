@@ -12,10 +12,12 @@
     android:paddingTop="@dimen/fragment_vertical_margin"
     android:paddingRight="@dimen/fragment_horizontal_margin"
     android:paddingBottom="@dimen/fragment_vertical_margin"
+    android:background="@color/colorBackground"
     tools:context=".WelcomeFragment">
 
     <TextView
         android:id="@+id/welcome_text"
+        style="@style/griffindorText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -26,6 +28,7 @@
 
     <TextView
         android:id="@+id/hello_text"
+        style="@style/griffindorText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -37,6 +40,7 @@
 
     <Button
         android:id="@+id/ready_button"
+        style="@style/griffindor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -44,7 +48,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructionsText" />
+        app:layout_constraintTop_toBottomOf="@+id/hello_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

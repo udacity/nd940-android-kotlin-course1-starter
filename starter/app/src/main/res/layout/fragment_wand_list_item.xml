@@ -14,39 +14,52 @@
 
         <TextView
             android:id="@+id/itemName"
+            style="@style/griffindor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
+            android:fontFamily="casual"
             android:text="@={wand.name}"
+            android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Potter" />
 
         <TextView
             android:id="@+id/itemSize"
+            style="@style/griffindor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@={``+wand.length}"
+            android:fontFamily="casual"
+            android:text="@{@string/length_item_text(wand.length)}"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/itemName"
-            app:layout_constraintTop_toBottomOf="@+id/itemName" />
+            app:layout_constraintTop_toBottomOf="@+id/itemName"
+            tools:text="33 cm" />
 
         <TextView
             android:id="@+id/itemWood"
+            style="@style/griffindor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:text="@={wand.wood}"
+            android:fontFamily="casual"
+            android:text="@{@string/wood_item_text(wand.wood)}"
+            android:textStyle="bold"
             app:layout_constraintBaseline_toBaselineOf="@+id/itemSize"
-            app:layout_constraintStart_toEndOf="@+id/itemSize" />
+            app:layout_constraintStart_toEndOf="@+id/itemSize"
+            tools:text="Oak" />
 
         <TextView
             android:id="@+id/itemCore"
+            style="@style/wand_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@={wand.core}"
+            android:text="@{@string/core_item_text(wand.core)}"
             app:layout_constraintStart_toStartOf="@+id/itemSize"
-            app:layout_constraintTop_toBottomOf="@+id/itemSize" />
+            app:layout_constraintTop_toBottomOf="@+id/itemSize"
+            tools:text="Phoenix Feather" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
