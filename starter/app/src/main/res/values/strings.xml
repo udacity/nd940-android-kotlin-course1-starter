@@ -19,4 +19,6 @@
     <string name="instructions_fragment_label">Instructions</string>
     <string name="shoe_list_fragment_label">Shoe List</string>
     <string name="logout_menu_item">Logout</string>
+
+    <string name="fab_content_description">Add shoe</string>
 </resources>
