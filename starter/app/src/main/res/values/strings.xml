@@ -6,4 +6,6 @@
     <string name="email_field_hint">name@example.com</string>
     <string name="email_field_label">email:</string>
     <string name="password_field_label">password:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
