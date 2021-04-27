@@ -22,10 +22,10 @@
         tools:layout="@layout/fragment_welcome">
         <action
             android:id="@+id/action_welcomeFragment_to_instructionFragment"
-            app:destination="@id/instructionFragment" />
+            app:destination="@id/instructionsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/instructionFragment"
+        android:id="@+id/instructionsFragment"
         android:name="com.udacity.shoestore.instructionsFragment"
         android:label="@string/instructions_fragment_label"
         tools:layout="@layout/fragment_instruction">
