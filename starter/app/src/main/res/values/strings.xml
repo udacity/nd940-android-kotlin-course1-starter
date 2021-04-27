@@ -6,6 +6,7 @@
     <string name="email_field_hint">name@example.com</string>
     <string name="email_field_label">email:</string>
     <string name="password_field_label">password:</string>
+    <string name="welcome_fragment_label">Welcome</string>
     <string name="welcome_header">Welcome</string>
     <string name="welcome_content">orem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulum eu lorem id consectetur. Duis consectetur viverra tincidunt. Integer hendrerit porta tempus. Sed vel varius lacus. Morbi eros purus, luctus tincidunt tincidunt pharetra, bibendum et ipsum. Aenean pretium mattis lacus, a condimentum massa porttitor ac. Nulla eget bibendum lacus.
 
@@ -20,4 +21,7 @@ Quisque auctor magna in nisi iaculis eleifend. Praesent venenatis lectus est, a 
     <string name="shoe_list_button">Go to shoe list</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_fragment_label">Login</string>
+    <string name="instructions_fragment_label">Instructions</string>
+    <string name="shoe_list_fragment_label">Shoe List</string>
 </resources>
