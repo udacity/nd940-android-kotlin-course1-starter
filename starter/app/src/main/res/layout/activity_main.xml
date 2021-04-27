@@ -29,8 +29,6 @@
             app:defaultNavHost="true"
             app:navGraph="@navigation/navigation" />
 
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 
 </layout>
