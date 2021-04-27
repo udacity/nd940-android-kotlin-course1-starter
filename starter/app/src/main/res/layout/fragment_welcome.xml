@@ -20,6 +20,12 @@
             android:layout_height="wrap_content"
             android:text="@string/welcome_content" />
 
+        <Button
+            android:id="@+id/instructionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/instructions_button" />
+
     </LinearLayout>
 
 </layout>

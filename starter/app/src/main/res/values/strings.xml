@@ -14,4 +14,7 @@ Duis et pellentesque enim. Praesent malesuada nunc quam, quis mollis magna sagit
 Nunc eget placerat elit. Integer et ex orci. Integer urna ipsum, lobortis et lacinia vitae, blandit id dui. Aliquam sagittis porta vestibulum. Nam in libero ac enim facilisis laoreet. Sed ultrices volutpat finibus. Morbi nisl erat, ullamcorper ac dignissim lacinia, accumsan id metus. Suspendisse vel varius urna, vel tincidunt felis. Fusce et massa erat. Ut lacinia, erat sed ultrices sodales, nibh dolor tempus tortor, ut laoreet tellus purus in orci.
 
 Quisque auctor magna in nisi iaculis eleifend. Praesent venenatis lectus est, a semper ante aliquam ut. Nunc interdum in dui volutpat rutrum. Suspendisse potenti. Praesent ultricies pharetra turpis. Vestibulum lacus urna, varius eu justo ac, ultricies pulvinar ante. In ullamcorper quis urna non volutpat. Phasellus quis libero est. Sed sollicitudin rhoncus sem, ut commodo diam sagittis vitae. Nam congue, tellus vel aliquam imperdiet, elit felis viverra lectus, ut veh</string>
+
+    <string name="instructions_button">Go to instructions</string>
+    <string name="instructions_content">Instructions are here</string>
 </resources>
