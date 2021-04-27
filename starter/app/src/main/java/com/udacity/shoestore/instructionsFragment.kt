@@ -10,10 +10,10 @@ import com.udacity.shoestore.databinding.FragmentInstructionBinding
 
 /**
  * A simple [Fragment] subclass.
- * Use the [instructionFragment.newInstance] factory method to
+ * Use the [instructionsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class instructionFragment : Fragment() {
+class instructionsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
