@@ -3,6 +3,7 @@ package com.udacity.shoestore
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -33,4 +34,5 @@ class LoginFragment : Fragment() {
 
         return binding.root
     }
+
 }
