@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 
@@ -24,6 +25,12 @@ class ShoeListFragment : Fragment() {
         savedInstanceState: Bundle?): View? {
         val binding: FragmentShoeListBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoe_list, container, false)
+
+        val fab = binding.fab
+        val toast = Toast.makeText(getContext(), "Add shoe FAB pressed", Toast.LENGTH_LONG)
+        fab.setOnClickListener {
+            toast.show()
+        }
         return binding.root
     }
 
