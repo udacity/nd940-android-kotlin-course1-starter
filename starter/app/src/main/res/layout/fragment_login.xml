@@ -37,7 +37,7 @@
             android:autofillHints=".AUTOFILL_HINT_PASSWORD" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/registerButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -46,7 +46,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/loginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -55,7 +55,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/emailLabelTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -65,7 +65,7 @@
             app:layout_constraintEnd_toStartOf="@+id/editTextTextEmailAddress" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/passwordLabelTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
