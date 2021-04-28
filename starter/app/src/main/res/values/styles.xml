@@ -16,4 +16,55 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="titles">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/title_size</item>
+    </style>
+    <style name="title_2">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="textFields">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+    </style>
+    <style name="button_1">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+    </style>
+    <style name="button_2">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/small_size</item>
+    </style>
+    <style name="button_3">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">8dp</item>
+    </style>
+    <style name="button_4">
+        <item name="android:background">@android:color/holo_red_dark</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">8dp</item>
+    </style>
+    <style name="button_5">
+        <item name="android:background">@android:color/holo_green_dark</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">8dp</item>
+    </style>
+    <style name="paragraph_1">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+    </style>
 </resources>
