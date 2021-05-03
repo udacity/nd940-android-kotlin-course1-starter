@@ -10,7 +10,9 @@ class ShoeViewModel: ViewModel() {
 
     init {
         Log.i("ShoeViewModel", "ShoeViewModel created!")
-        shoeList.add(Shoe("My first shoe", 10.0, "Nike", "Very cool", mutableListOf("")))
+        for(i in 1..100){
+            shoeList.add(Shoe("My shoe $i", 10.0, "Nike", "Very cool", mutableListOf("")))
+        }
     }
 
     override fun onCleared() {

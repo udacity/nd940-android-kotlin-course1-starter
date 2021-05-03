@@ -19,131 +19,47 @@
             android:layout_marginTop="?attr/actionBarSize">
 
             <LinearLayout
+                android:id="@+id/shoe_list_holder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical" >
 
-                <androidx.cardview.widget.CardView
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/card_view"
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    card_view:cardCornerRadius="4dp">
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+<!--                    android:id="@+id/card_view"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    card_view:cardCornerRadius="4dp">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@{shoeViewModel.shoeList[0].name}"
-                        android:textSize="50sp"/>
-                </androidx.cardview.widget.CardView>
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@{shoeViewModel.shoeList[0].name}"-->
+<!--                        android:textSize="50sp"/>-->
+<!--                </androidx.cardview.widget.CardView>-->
 
-                <androidx.cardview.widget.CardView
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/card_view2"
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    card_view:cardCornerRadius="4dp">
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+<!--                    android:id="@+id/card_view2"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    card_view:cardCornerRadius="4dp">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="HARDCODED 2"
-                        android:textSize="50sp"/>
-                </androidx.cardview.widget.CardView>
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="HARDCODED 2"-->
+<!--                        android:textSize="50sp"/>-->
+<!--                </androidx.cardview.widget.CardView>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 2"
-                    android:textSize="50sp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 3"
-                    android:textSize="50sp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 4"
-                    android:textSize="50sp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 4"
-                    android:textSize="50sp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 4"
-                    android:textSize="50sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 4"
-                    android:textSize="50sp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 4"
-                    android:textSize="50sp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 4"
-                    android:textSize="50sp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 4"
-                    android:textSize="50sp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 4"
-                    android:textSize="50sp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 4"
-                    android:textSize="50sp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 4"
-                    android:textSize="50sp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 4"
-                    android:textSize="50sp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 4"
-                    android:textSize="50sp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 4"
-                    android:textSize="50sp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HARDCODED 4"
-                    android:textSize="50sp"/>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
         <LinearLayout
