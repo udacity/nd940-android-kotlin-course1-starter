@@ -2,8 +2,6 @@
     <string name="app_name">ShoeStore</string>
     <string name="create_new_login_button">Register</string>
     <string name="login_button">Login</string>
-    <string name="password_field_hint">your password</string>
-    <string name="email_field_hint">name@example.com</string>
     <string name="email_field_label">email:</string>
     <string name="password_field_label">password:</string>
     <string name="welcome_fragment_label">Welcome</string>

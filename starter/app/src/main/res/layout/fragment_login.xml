@@ -13,28 +13,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:autofillHints=".AUTOFILL_HINT_EMAIL_ADDRESS"
             android:ems="10"
-            android:hint="@string/email_field_hint"
             android:inputType="textEmailAddress"
             app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed"
-            android:autofillHints=".AUTOFILL_HINT_EMAIL_ADDRESS"/>
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autofillHints=".AUTOFILL_HINT_PASSWORD"
             android:ems="10"
-            android:hint="@string/password_field_hint"
             android:inputType="textPassword"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
-            android:autofillHints=".AUTOFILL_HINT_PASSWORD" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
         <Button
             android:id="@+id/registerButton"
@@ -59,6 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
+            android:labelFor="@id/editTextTextEmailAddress"
             android:text="@string/email_field_label"
             android:textSize="18sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextTextEmailAddress"
@@ -69,6 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
+            android:labelFor="@id/editTextTextPassword"
             android:text="@string/password_field_label"
             android:textSize="18sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextTextPassword"
