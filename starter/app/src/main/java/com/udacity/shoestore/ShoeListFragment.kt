@@ -18,6 +18,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.models.ShoeViewModel
+import timber.log.Timber
 
 
 class ShoeListFragment : Fragment() {
@@ -35,11 +36,11 @@ class ShoeListFragment : Fragment() {
                 inflater, R.layout.fragment_shoe_list, container, false)
 
 
-        Log.i("ShoeListFragment", "called ViewModelProvider")
+        Timber.i("called ViewModelProvider")
         viewModel = ViewModelProvider(this).get(ShoeViewModel::class.java)
 
         binding.shoeViewModel = viewModel
-        binding.setLifecycleOwner(this)
+        binding.lifecycleOwner = this
 
         binding.fab.setOnClickListener(Navigation.createNavigateOnClickListener(
                 R.id.action_shoeListFragment_to_shoeDetailFragment
@@ -50,8 +51,8 @@ class ShoeListFragment : Fragment() {
         return binding.root
     }
 
-    fun buildShoeListViews(){
-        for (shoe in viewModel.shoeList){
+    private fun buildShoeListViews(){
+        for (shoe in viewModel.shoeList.value!!){
             //create a CardView for each shoe in viewModel.shoeList
             val shoeCard = CardView(requireContext())
             //set the layoutparams of the CardView
@@ -63,7 +64,7 @@ class ShoeListFragment : Fragment() {
             val margin = convertDpToPixels(8).toInt()
             layoutParams.setMargins(margin, margin, margin, 0)
             //add a bottom margin to the last card
-            if(viewModel.shoeList.indexOf(shoe) == viewModel.shoeList.size - 1){
+            if(viewModel.shoeList.value!!.indexOf(shoe) == viewModel.shoeList.value!!.size - 1){
                 layoutParams.bottomMargin = margin
             }
             //set the corner radius of the CardView
