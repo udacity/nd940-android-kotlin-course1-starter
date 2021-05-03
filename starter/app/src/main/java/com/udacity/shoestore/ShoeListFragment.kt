@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import com.udacity.shoestore.models.ShoeViewModel
 
 class ShoeListFragment : Fragment() {
 
