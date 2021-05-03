@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="shoeViewModel"
+            type="com.udacity.shoestore.ShoeViewModel" />
+    </data>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,7 +37,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="HARDCODED 1"
+                        android:text="@{shoeViewModel.shoeList[0].name}"
                         android:textSize="50sp"/>
                 </androidx.cardview.widget.CardView>
 
