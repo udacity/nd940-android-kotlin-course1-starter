@@ -7,14 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ShoeListFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ShoeListFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,15 +17,13 @@ class ShoeListFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View? {
+        savedInstanceState: Bundle?): View {
         val binding: FragmentShoeListBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoe_list, container, false)
 
-        val fab = binding.fab
-        val toast = Toast.makeText(getContext(), "Add shoe FAB pressed", Toast.LENGTH_LONG)
-        fab.setOnClickListener {
-            toast.show()
-        }
+        binding.fab.setOnClickListener(Navigation.createNavigateOnClickListener(
+            R.id.action_shoeListFragment_to_shoeDetailFragment
+        ))
         return binding.root
     }
 

@@ -8,11 +8,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ShoeDetailFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ShoeDetailFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

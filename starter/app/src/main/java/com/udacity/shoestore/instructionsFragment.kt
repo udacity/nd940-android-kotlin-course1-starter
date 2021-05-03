@@ -9,11 +9,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import com.udacity.shoestore.databinding.FragmentInstructionBinding
 
-/**
- * A simple [Fragment] subclass.
- * Use the [instructionsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class instructionsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

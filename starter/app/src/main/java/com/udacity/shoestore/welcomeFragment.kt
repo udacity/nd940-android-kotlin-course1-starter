@@ -10,11 +10,6 @@ import androidx.navigation.Navigation
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
-/**
- * A simple [Fragment] subclass.
- * Use the [welcomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class welcomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

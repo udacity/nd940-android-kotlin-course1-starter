@@ -13,12 +13,14 @@
     <string name="instructions_button">Go to instructions</string>
     <string name="instructions_content">Instructions are here</string>
     <string name="shoe_list_button">Go to shoe list</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="login_fragment_label">Login</string>
     <string name="instructions_fragment_label">Instructions</string>
     <string name="shoe_list_fragment_label">Shoe List</string>
     <string name="logout_menu_item">Logout</string>
+    <string name="shoe_detail_fragment_label">Shoe Details</string>
 
     <string name="fab_content_description">Add shoe</string>
 </resources>
