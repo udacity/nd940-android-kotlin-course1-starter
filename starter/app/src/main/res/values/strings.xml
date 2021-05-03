@@ -23,4 +23,9 @@
     <string name="shoe_detail_fragment_label">Shoe Details</string>
 
     <string name="fab_content_description">Add shoe</string>
+    <string name="shoe_detail_name">Shoe name</string>
+    <string name="shoe_detail_company">Company</string>
+    <string name="shoe_detail_size">Size</string>
+    <string name="shoe_detail_description">Description</string>
+
 </resources>

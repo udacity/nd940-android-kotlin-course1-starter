@@ -85,8 +85,6 @@ class ShoeListFragment : Fragment() {
             //add the CardView to the Linear Layout in the binding.
             binding.shoeListHolder.addView(shoeCard)
         }
-
-
     }
 
     private fun convertDpToPixels(dp: Int) : Float {

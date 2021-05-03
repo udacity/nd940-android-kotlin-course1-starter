@@ -1,15 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <FrameLayout
+
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ShoeDetailFragment">
+        android:layout_marginTop="?attr/actionBarSize">
 
-        <TextView
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/hello_blank_fragment" />
-    </FrameLayout>
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textViewShoeDetailNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoe_detail_name"
+                android:labelFor="@id/editTextShoeDetailName"/>
+
+            <EditText
+                android:id="@+id/editTextShoeDetailName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textViewShoeDetailCompanyLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoe_detail_company"
+                android:labelFor="@id/editTextShoeDetailCompany"/>
+
+            <EditText
+                android:id="@+id/editTextShoeDetailCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textViewShoeDetailSizeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoe_detail_size"
+                android:labelFor="@id/editTextShoeDetailSize"/>
+
+            <EditText
+                android:id="@+id/editTextShoeDetailSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:importantForAutofill="no" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textViewShoeDetailDescriptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoe_detail_description"
+                android:labelFor="@id/editTextShoeDetailDescription"/>
+
+            <EditText
+                android:id="@+id/editTextShoeDetailDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
+
+        </TableRow>
+    </TableLayout>
+
 </layout>
