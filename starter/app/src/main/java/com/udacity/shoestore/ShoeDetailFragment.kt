@@ -12,13 +12,15 @@ import timber.log.Timber
 
 class ShoeDetailFragment : Fragment() {
 
+    private lateinit var binding: FragmentShoeDetailBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
-        val binding: FragmentShoeDetailBinding = DataBindingUtil.inflate(
+        binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoe_detail, container, false)
 
         binding.cancelButton.setOnClickListener {
@@ -35,6 +37,11 @@ class ShoeDetailFragment : Fragment() {
 
     private fun onSave() {
         Timber.i("Do save stuff here")
+        val newShoeName = binding.editTextShoeDetailName.text
+        val newShoeCompany = binding.editTextShoeDetailCompany.text
+        val newShoeSize = binding.editTextShoeDetailSize.text
+        val newShoeDescription = binding.editTextShoeDetailDescription.text
+        Timber.i("Name: $newShoeName, Company: $newShoeCompany, Size: $newShoeSize, Description: $newShoeDescription")
     }
 
 
