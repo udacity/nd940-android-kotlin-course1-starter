@@ -26,4 +26,8 @@ class ShoeViewModel: ViewModel() {
         Timber.i("ShoeViewModel destroyed!")
     }
 
+    fun addShoe(shoe : Shoe){
+        _shoeList.value!!.add(shoe)
+    }
+
 }

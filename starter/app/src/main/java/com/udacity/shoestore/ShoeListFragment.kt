@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
@@ -21,7 +22,7 @@ import timber.log.Timber
 class ShoeListFragment : Fragment() {
 
     private lateinit var binding: FragmentShoeListBinding
-    private lateinit var viewModel: ShoeViewModel
+    private val viewModel : ShoeViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,13 +33,6 @@ class ShoeListFragment : Fragment() {
                               savedInstanceState: Bundle?): View {
         binding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_shoe_list, container, false)
-
-
-        Timber.i("called ViewModelProvider")
-        viewModel = ViewModelProvider(this).get(ShoeViewModel::class.java)
-
-        binding.shoeViewModel = viewModel
-        binding.lifecycleOwner = this
 
         binding.fab.setOnClickListener(Navigation.createNavigateOnClickListener(
                 R.id.action_shoeListFragment_to_shoeDetailFragment

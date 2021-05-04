@@ -6,13 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
+import com.udacity.shoestore.models.Shoe
+import com.udacity.shoestore.models.ShoeViewModel
 import timber.log.Timber
 
 class ShoeDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentShoeDetailBinding
+    private val viewModel : ShoeViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,12 +40,13 @@ class ShoeDetailFragment : Fragment() {
     }
 
     private fun onSave() {
-        Timber.i("Do save stuff here")
-        val newShoeName = binding.editTextShoeDetailName.text
-        val newShoeCompany = binding.editTextShoeDetailCompany.text
-        val newShoeSize = binding.editTextShoeDetailSize.text
-        val newShoeDescription = binding.editTextShoeDetailDescription.text
+        val newShoeName = binding.editTextShoeDetailName.text.toString()
+        val newShoeCompany = binding.editTextShoeDetailCompany.text.toString()
+        val newShoeSize = binding.editTextShoeDetailSize.text.toString().toDouble()
+        val newShoeDescription = binding.editTextShoeDetailDescription.text.toString()
+        val newShoe = Shoe(newShoeName, newShoeSize, newShoeCompany, newShoeDescription)
         Timber.i("Name: $newShoeName, Company: $newShoeCompany, Size: $newShoeSize, Description: $newShoeDescription")
+        viewModel.addShoe(newShoe)
     }
 
 
