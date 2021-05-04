@@ -26,4 +26,7 @@
     <string name="shoe_detail_size">Size</string>
     <string name="shoe_detail_description">Description</string>
 
+    <string name="cancel_button">Cancel</string>
+    <string name="save_button">Save</string>
+
 </resources>

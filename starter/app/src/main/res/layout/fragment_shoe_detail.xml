@@ -10,75 +10,75 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textViewShoeDetailNameLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/shoe_detail_name"
-                android:labelFor="@id/editTextShoeDetailName"/>
+                android:labelFor="@id/editTextShoeDetailName"
+                android:text="@string/shoe_detail_name" />
 
             <EditText
                 android:id="@+id/editTextShoeDetailName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textViewShoeDetailCompanyLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/shoe_detail_company"
-                android:labelFor="@id/editTextShoeDetailCompany"/>
+                android:labelFor="@id/editTextShoeDetailCompany"
+                android:text="@string/shoe_detail_company" />
 
             <EditText
                 android:id="@+id/editTextShoeDetailCompany"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textViewShoeDetailSizeLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/shoe_detail_size"
-                android:labelFor="@id/editTextShoeDetailSize"/>
+                android:labelFor="@id/editTextShoeDetailSize"
+                android:text="@string/shoe_detail_size" />
 
             <EditText
                 android:id="@+id/editTextShoeDetailSize"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="numberDecimal"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textViewShoeDetailDescriptionLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/shoe_detail_description"
-                android:labelFor="@id/editTextShoeDetailDescription"/>
+                android:labelFor="@id/editTextShoeDetailDescription"
+                android:text="@string/shoe_detail_description" />
 
             <EditText
                 android:id="@+id/editTextShoeDetailDescription"
@@ -88,6 +88,23 @@
                 android:importantForAutofill="no"
                 android:inputType="textPersonName" />
 
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel_button" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save_button" />
         </TableRow>
     </TableLayout>
 
