@@ -2,11 +2,8 @@ package com.udacity.shoestore
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.util.TypedValue
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.view.ViewGroup.MarginLayoutParams
@@ -28,6 +25,7 @@ class ShoeListFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -85,6 +83,12 @@ class ShoeListFragment : Fragment() {
             //add the CardView to the Linear Layout in the binding.
             binding.shoeListHolder.addView(shoeCard)
         }
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu) {
+        super.onPrepareOptionsMenu(menu)
+        val item: MenuItem = menu.findItem(R.id.loginFragment)
+        item.isVisible = true
     }
 
     private fun convertDpToPixels(dp: Int) : Float {
