@@ -31,4 +31,6 @@
     <string name="cancel_button">Cancel</string>
     <string name="save_button">Save</string>
 
+    <string name="blank_shoe_warning_toast">Please enter a name</string>
+
 </resources>

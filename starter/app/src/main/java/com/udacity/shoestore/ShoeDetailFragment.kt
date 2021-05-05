@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
@@ -34,7 +35,14 @@ class ShoeDetailFragment : Fragment() {
     }
 
     fun onSave() {
-        viewModel.addShoe()
-        Navigation.findNavController(requireView()).navigateUp()
+        if(viewModel.newShoe.name == ""){
+            Toast.makeText(requireActivity(),
+                    R.string.blank_shoe_warning_toast,
+                    Toast.LENGTH_LONG)
+                    .show()
+        } else {
+            viewModel.addShoe()
+            Navigation.findNavController(requireView()).navigateUp()
+        }
     }
 }

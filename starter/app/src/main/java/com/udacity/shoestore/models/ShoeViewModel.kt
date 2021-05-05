@@ -22,6 +22,6 @@ class ShoeViewModel: ViewModel() {
     fun addShoe(){
         mutableShoeList.add(newShoe)
         _shoeListLiveData.value = mutableShoeList
-        newShoe = Shoe("", 0.0, "", "" )
+        newShoe = Shoe("", 0.0, "", "")
     }
 }
