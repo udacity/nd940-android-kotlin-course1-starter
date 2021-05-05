@@ -6,8 +6,8 @@
             name="shoeDetailFragment"
             type="com.udacity.shoestore.ShoeDetailFragment" />
         <variable
-            name="newShoe"
-            type="com.udacity.shoestore.models.Shoe" />
+            name="viewModel"
+            type="com.udacity.shoestore.models.ShoeViewModel" />
     </data>
 
     <TableLayout
@@ -34,7 +34,7 @@
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
-                android:text="@={newShoe.name}" />
+                android:text="@={viewModel.newShoe.name}" />
         </TableRow>
 
         <TableRow
@@ -56,7 +56,7 @@
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
-                android:text="@={newShoe.company}" />
+                android:text="@={viewModel.newShoe.company}" />
         </TableRow>
 
         <TableRow
@@ -78,7 +78,7 @@
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="numberDecimal"
-                android:text="@={`` + newShoe.size}" />
+                android:text="@={`` + viewModel.newShoe.size}" />
 
         </TableRow>
 
@@ -102,7 +102,7 @@
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
-                android:text="@={newShoe.description}" />
+                android:text="@={viewModel.newShoe.description}" />
 
         </TableRow>
 

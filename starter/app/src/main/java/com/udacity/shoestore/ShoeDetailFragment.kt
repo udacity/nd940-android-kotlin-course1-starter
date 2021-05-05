@@ -18,17 +18,13 @@ class ShoeDetailFragment : Fragment() {
     private lateinit var binding: FragmentShoeDetailBinding
     private val viewModel : ShoeViewModel by activityViewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoe_detail, container, false)
 
         binding.shoeDetailFragment = this
-        binding.newShoe = Shoe("", 0.0, "", "")
+        binding.viewModel = viewModel
 
         binding.cancelButton.setOnClickListener {
             Navigation.findNavController(it).navigateUp()
@@ -38,7 +34,7 @@ class ShoeDetailFragment : Fragment() {
     }
 
     fun onSave() {
-        viewModel.addShoe(binding.newShoe ?: Shoe("", 0.0, "", ""))
+        viewModel.addShoe()
         Navigation.findNavController(requireView()).navigateUp()
     }
 }
