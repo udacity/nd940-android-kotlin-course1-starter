@@ -10,20 +10,25 @@ import androidx.navigation.Navigation
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
-class welcomeFragment : Fragment() {
+class WelcomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         // Inflate the layout for this fragment
         val binding: FragmentWelcomeBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_welcome, container, false)
+            inflater, R.layout.fragment_welcome, container, false
+        )
         binding.instructionButton.setOnClickListener(
             Navigation.createNavigateOnClickListener(
-                R.id.action_welcomeFragment_to_instructionFragment))
+                R.id.action_welcomeFragment_to_instructionFragment
+            )
+        )
         return binding.root
     }
 }

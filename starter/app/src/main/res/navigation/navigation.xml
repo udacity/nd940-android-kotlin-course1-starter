@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.udacity.shoestore.welcomeFragment"
+        android:name="com.udacity.shoestore.WelcomeFragment"
         android:label="@string/welcome_fragment_label"
         tools:layout="@layout/fragment_welcome">
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/instructionsFragment"
-        android:name="com.udacity.shoestore.instructionsFragment"
+        android:name="com.udacity.shoestore.InstructionsFragment"
         android:label="@string/instructions_fragment_label"
         tools:layout="@layout/fragment_instruction">
         <action

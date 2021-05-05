@@ -17,12 +17,15 @@ import timber.log.Timber
 class ShoeDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentShoeDetailBinding
-    private val viewModel : ShoeViewModel by activityViewModels()
+    private val viewModel: ShoeViewModel by activityViewModels()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         binding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_shoe_detail, container, false)
+            inflater, R.layout.fragment_shoe_detail, container, false
+        )
 
         binding.shoeDetailFragment = this
         binding.viewModel = viewModel
@@ -35,11 +38,13 @@ class ShoeDetailFragment : Fragment() {
     }
 
     fun onSave() {
-        if(viewModel.newShoe.name == ""){
-            Toast.makeText(requireActivity(),
-                    R.string.blank_shoe_warning_toast,
-                    Toast.LENGTH_SHORT)
-                    .show()
+        if (viewModel.newShoe.name == "") {
+            Toast.makeText(
+                requireActivity(),
+                R.string.blank_shoe_warning_toast,
+                Toast.LENGTH_SHORT
+            )
+                .show()
         } else {
             viewModel.addShoe()
             Navigation.findNavController(requireView()).navigateUp()

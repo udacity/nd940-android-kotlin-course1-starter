@@ -17,17 +17,23 @@ class LoginFragment : Fragment() {
         super.onCreate(savedInstanceState)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         // Inflate the layout for this fragment
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_login, container, false)
+            inflater, R.layout.fragment_login, container, false
+        )
+
         binding.registerButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_welcomeFragment))
+            Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_welcomeFragment)
+        )
+
         binding.loginButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_welcomeFragment))
+            Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_welcomeFragment)
+        )
 
         return binding.root
     }
-
 }
