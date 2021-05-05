@@ -31,6 +31,8 @@
     <string name="cancel_button">Cancel</string>
     <string name="save_button">Save</string>
 
+    <string name="shoe_list_fragment_shoe_size">Size: %1$s</string>
+
     <string name="blank_shoe_warning_toast">Please enter a name</string>
 
 </resources>

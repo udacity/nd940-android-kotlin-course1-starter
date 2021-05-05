@@ -97,7 +97,7 @@ class ShoeListFragment : Fragment() {
             //create a TextView for the shoe size
             val sizeText = TextView(requireContext())
             //set the text to the shoe name
-            sizeText.text = shoe.size.toString()
+            sizeText.text = getString(R.string.shoe_list_fragment_shoe_size, shoe.size.toString())
             sizeText.textSize = spToPx(15.0f, requireContext())
             sizeText.gravity = Gravity.END
 
