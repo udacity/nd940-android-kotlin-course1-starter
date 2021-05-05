@@ -78,8 +78,6 @@ class ShoeListFragment : Fragment() {
             shoeCardLinearLayout.orientation = LinearLayout.VERTICAL
             shoeCardLinearLayout.layoutParams = layoutParams
 
-
-
             //create a TextView for the shoe name
             val nameText = TextView(requireContext())
             //set the text to the shoe name
@@ -133,6 +131,5 @@ class ShoeListFragment : Fragment() {
         //AndroidEx - https://stackoverflow.com/questions/29664993/how-to-convert-dp-px-sp-among-each-other-especially-dp-and-sp
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, sp, context.resources.displayMetrics)
     }
-
 
 }
