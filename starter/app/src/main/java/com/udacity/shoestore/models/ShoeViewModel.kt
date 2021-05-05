@@ -12,16 +12,14 @@ class ShoeViewModel: ViewModel() {
     val shoeListLiveData: LiveData<List<Shoe>>
             get() = _shoeListLiveData
 
-    var newShoe = Shoe("", 0.0, "", "")
-
-    override fun onCleared() {
-        super.onCleared()
-        Timber.i("ShoeViewModel destroyed!")
+    init{
+        _shoeListLiveData.value = mutableShoeList
     }
+
+    var newShoe = Shoe("", 0.0, "", "")
 
     fun addShoe(){
         mutableShoeList.add(newShoe)
-        _shoeListLiveData.value = mutableShoeList
         newShoe = Shoe("", 0.0, "", "")
     }
 }
