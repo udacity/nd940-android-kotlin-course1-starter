@@ -27,27 +27,18 @@ class ShoeDetailFragment : Fragment() {
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoe_detail, container, false)
 
-        binding.cancelButton.setOnClickListener {
-            Navigation.findNavController(it).navigateUp()
-        }
+        binding.shoeDetailFragment = this
+        binding.newShoe = Shoe("", 0.0, "", "")
 
-        binding.saveButton.setOnClickListener{
-            onSave()
+        binding.cancelButton.setOnClickListener {
             Navigation.findNavController(it).navigateUp()
         }
 
         return binding.root
     }
 
-    private fun onSave() {
-        val newShoeName = binding.editTextShoeDetailName.text.toString()
-        val newShoeCompany = binding.editTextShoeDetailCompany.text.toString()
-        val newShoeSize = binding.editTextShoeDetailSize.text.toString().toDouble()
-        val newShoeDescription = binding.editTextShoeDetailDescription.text.toString()
-        val newShoe = Shoe(newShoeName, newShoeSize, newShoeCompany, newShoeDescription)
-        Timber.i("Name: $newShoeName, Company: $newShoeCompany, Size: $newShoeSize, Description: $newShoeDescription")
-        viewModel.addShoe(newShoe)
+    fun onSave() {
+        viewModel.addShoe(binding.newShoe ?: Shoe("", 0.0, "", ""))
+        Navigation.findNavController(requireView()).navigateUp()
     }
-
-
 }

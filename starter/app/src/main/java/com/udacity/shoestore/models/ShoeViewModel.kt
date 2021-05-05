@@ -8,15 +8,12 @@ import timber.log.Timber
 class ShoeViewModel: ViewModel() {
 
     private val mutableShoeList : MutableList<Shoe> = mutableListOf()
-    private val _shoeList = MutableLiveData<List<Shoe>>()
-    val shoeList: LiveData<List<Shoe>>
-            get() = _shoeList
+    private val _shoeListLiveData = MutableLiveData<List<Shoe>>()
+    val shoeListLiveData: LiveData<List<Shoe>>
+            get() = _shoeListLiveData
 
     init {
         Timber.i("ShoeViewModel created!")
-        for(i in 1..40){
-            addShoe(Shoe("My shoe $i", 10.0, "Nike", "Very cool", mutableListOf("")))
-        }
     }
 
     override fun onCleared() {
@@ -26,6 +23,6 @@ class ShoeViewModel: ViewModel() {
 
     fun addShoe(shoe : Shoe){
         mutableShoeList.add(shoe)
-        _shoeList.value = mutableShoeList
+        _shoeListLiveData.value = mutableShoeList
     }
 }

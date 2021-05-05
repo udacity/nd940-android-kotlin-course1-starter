@@ -3,6 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="shoeDetailFragment"
+            type="com.udacity.shoestore.ShoeDetailFragment" />
+        <variable
+            name="newShoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,6 +30,7 @@
 
             <EditText
                 android:id="@+id/editTextShoeDetailName"
+                android:text="@={newShoe.name}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -41,6 +51,7 @@
 
             <EditText
                 android:id="@+id/editTextShoeDetailCompany"
+                android:text="@={newShoe.company}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -61,6 +72,7 @@
 
             <EditText
                 android:id="@+id/editTextShoeDetailSize"
+                android:text="@={`` + newShoe.size}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -82,6 +94,7 @@
 
             <EditText
                 android:id="@+id/editTextShoeDetailDescription"
+                android:text="@={newShoe.description}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -102,9 +115,11 @@
 
             <Button
                 android:id="@+id/saveButton"
+                android:onClick="@{() -> shoeDetailFragment.onSave()}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/save_button" />
+
         </TableRow>
     </TableLayout>
 
