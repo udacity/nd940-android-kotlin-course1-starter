@@ -38,7 +38,7 @@ class ShoeDetailFragment : Fragment() {
         if(viewModel.newShoe.name == ""){
             Toast.makeText(requireActivity(),
                     R.string.blank_shoe_warning_toast,
-                    Toast.LENGTH_LONG)
+                    Toast.LENGTH_SHORT)
                     .show()
         } else {
             viewModel.addShoe()
