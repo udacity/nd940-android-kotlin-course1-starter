@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".welcomeFragment">
 
+    <!-- LinearLayout used as there are only three child elements that can sit one atop the other
+    with margins to space them. The LinearLayout has a gravity of center to center the text views
+    and button in the center of the display -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

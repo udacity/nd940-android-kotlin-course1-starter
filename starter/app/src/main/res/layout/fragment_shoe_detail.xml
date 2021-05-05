@@ -10,6 +10,10 @@
             type="com.udacity.shoestore.models.ShoeViewModel" />
     </data>
 
+    <!-- Table layout chosen to easily lay out 2 columns of labels and editText fields. TableLayout
+    also allows easy progression through the cells when filling in fields (especially with physical
+    keyboard input. Additional reason was simply wanting to experiment with different layouts
+    over ConstraintLayout and LinearLayout -->
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

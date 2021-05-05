@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.android.navigation.LoginFragment">
 
+    <!-- constraint layout used to align the register and login buttons with the edge of the
+    edit text fields easily. Username and password are chained so that their vertical center
+    is in the vertical center of the display-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
