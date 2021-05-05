@@ -53,68 +53,82 @@ class ShoeListFragment : Fragment() {
     }
 
     private fun buildShoeListViews(shoeList : List<Shoe>) {
+        //for every shoe in the viewModel shoeList LiveData
         for (shoe in shoeList){
-            //create a CardView for each shoe in viewModel.shoeList
-            val shoeCard = CardView(requireContext())
-            //set the layoutparams of the CardView
-            val layoutParams = MarginLayoutParams(
-                MATCH_PARENT,
-                WRAP_CONTENT,
-            )
-            //set the margins of the CardView
-            val margin = convertDpToPixels(8).toInt()
-            layoutParams.setMargins(margin, margin / 2, margin, margin / 2)
-
-            //set the corner radius of the CardView
-            val cornerRadius = convertDpToPixels(4)
-            shoeCard.radius = cornerRadius
-            //apply the layoutParams to the CardView
-            shoeCard.layoutParams = layoutParams
-
-            val shoeCardLinearLayout = LinearLayout(requireContext())
-            shoeCardLinearLayout.orientation = LinearLayout.VERTICAL
-            shoeCardLinearLayout.layoutParams = layoutParams
-
-            //create a TextView for the shoe name
-            val nameText = TextView(requireContext())
-            //set the text to the shoe name
-            nameText.text = shoe.name
-            nameText.gravity = Gravity.START
-            nameText.textSize = spToPx(30.0f, requireContext())
-
-            //create a TextView for the shoe company
-            val companyText = TextView(requireContext())
-            //set the text to the shoe name
-            companyText.text = shoe.company
-            companyText.textSize = spToPx(20.0f, requireContext())
-            companyText.gravity = Gravity.END
-
-            //create a TextView for the shoe size
-            val sizeText = TextView(requireContext())
-            //set the text to the shoe name
-            sizeText.text = getString(R.string.shoe_list_fragment_shoe_size, shoe.size.toString())
-            sizeText.textSize = spToPx(15.0f, requireContext())
-            sizeText.gravity = Gravity.END
-
-            //create a TextView for the shoe description
-            val descriptionText = TextView(requireContext())
-            //set the text to the shoe name
-            descriptionText.text = shoe.description
-            descriptionText.textSize = spToPx(15.0f, requireContext())
-
-
-            shoeCardLinearLayout.addView(companyText)
-            shoeCardLinearLayout.addView(nameText)
-            shoeCardLinearLayout.addView(descriptionText)
-            shoeCardLinearLayout.addView(sizeText)
-            shoeCard.addView(shoeCardLinearLayout)
-            //add the TextViews to the CardView
-            //shoeCard.addView(nameText)
-            //             shoeCard.addView(companyText)
-
-            //add the CardView to the Linear Layout in the binding.
+            //create card view
+            val shoeCard = createShoeCardView()
+            //create linear layout for inside shoeCard
+            val linearLayout = createLinearLayoutForShoeCard()
+            //add the necessary text views to the linear layout
+            buildTextViewsInLinearLayout(linearLayout, shoe)
+            //add the LinearLayout to the CardView
+            shoeCard.addView(linearLayout)
+            //add the CardView to the LinearLayout CardView container in the binding.
             binding.shoeListHolder.addView(shoeCard)
         }
+    }
+
+    private fun buildTextViewsInLinearLayout(shoeCardLinearLayout: LinearLayout, shoe : Shoe) {
+        val companyTextView = createShoeTextView(shoe.company, Gravity.END, 20.0f)
+        val nameTextView = createShoeTextView(shoe.name, Gravity.START, 30.0f)
+        val descriptionTextView = createShoeTextView(shoe.description, Gravity.START, 15.0f)
+        val sizeTextView = createShoeTextView(
+            getString(R.string.shoe_list_fragment_shoe_size,
+                (if (shoe.size == 0.0) {
+                    "--.-"
+                } else {
+                    shoe.size.toString()
+                })),
+            Gravity.END,
+            15.0f)
+
+        shoeCardLinearLayout.addView(companyTextView)
+        shoeCardLinearLayout.addView(nameTextView)
+        shoeCardLinearLayout.addView(descriptionTextView)
+        shoeCardLinearLayout.addView(sizeTextView)
+    }
+
+
+    private fun createShoeCardView() : CardView {
+        val layoutParams = MarginLayoutParams(
+            MATCH_PARENT,
+            WRAP_CONTENT,
+        )
+        //create a CardView
+        val shoeCard = CardView(requireContext())
+
+        //set the margins of the CardView
+        val margin = convertDpToPixels(8).toInt()
+        layoutParams.setMargins(margin, margin / 2, margin, margin / 2)
+
+        //set the corner radius of the CardView
+        shoeCard.radius = convertDpToPixels(4)
+        val paddingAmount = convertDpToPixels(8).toInt()
+        shoeCard.setContentPadding(paddingAmount, paddingAmount, paddingAmount, paddingAmount)
+
+        //apply the layoutParams to the CardView
+        shoeCard.layoutParams = layoutParams
+
+        return shoeCard
+    }
+
+    private fun createLinearLayoutForShoeCard() : LinearLayout {
+        val layoutParams = MarginLayoutParams(
+            MATCH_PARENT,
+            WRAP_CONTENT,
+        )
+        val shoeCardLinearLayout = LinearLayout(requireContext())
+        shoeCardLinearLayout.orientation = LinearLayout.VERTICAL
+        shoeCardLinearLayout.layoutParams = layoutParams
+        return shoeCardLinearLayout
+    }
+
+    private fun createShoeTextView(text: String, gravity : Int, textSizeSP : Float): TextView {
+        val textView = TextView(requireContext())
+        textView.text = text
+        textView.gravity = gravity
+        textView.textSize = spToPx(textSizeSP, requireContext())
+        return textView
     }
 
     private fun convertDpToPixels(dp: Int) : Float {
