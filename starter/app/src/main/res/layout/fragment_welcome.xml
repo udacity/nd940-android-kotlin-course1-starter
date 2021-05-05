@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".WelcomeFragment">
+    tools:context=".fragments.WelcomeFragment">
 
     <!-- LinearLayout used as there are only three child elements that can sit one atop the other
     with margins to space them. The LinearLayout has a gravity of center to center the text views

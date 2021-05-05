@@ -5,7 +5,7 @@
 
         <variable
             name="shoeDetailFragment"
-            type="com.udacity.shoestore.ShoeDetailFragment" />
+            type="com.udacity.shoestore.fragments.ShoeDetailFragment" />
 
         <variable
             name="viewModel"

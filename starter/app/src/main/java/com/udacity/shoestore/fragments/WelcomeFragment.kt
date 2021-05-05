@@ -1,4 +1,4 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
-import com.udacity.shoestore.databinding.FragmentInstructionBinding
+import com.udacity.shoestore.R
+import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
-class InstructionsFragment : Fragment() {
+class WelcomeFragment : Fragment() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -18,13 +20,13 @@ class InstructionsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding: FragmentInstructionBinding =
-            DataBindingUtil.inflate(
-                layoutInflater, R.layout.fragment_instruction, container, false
-            )
-        binding.shoeListButton.setOnClickListener(
+        // Inflate the layout for this fragment
+        val binding: FragmentWelcomeBinding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_welcome, container, false
+        )
+        binding.instructionButton.setOnClickListener(
             Navigation.createNavigateOnClickListener(
-                R.id.action_instructionFragment_to_shoeListFragment
+                R.id.action_welcomeFragment_to_instructionFragment
             )
         )
         return binding.root
