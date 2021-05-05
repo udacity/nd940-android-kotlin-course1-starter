@@ -15,11 +15,12 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize">
+        android:gravity="center">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
 
             <TextView
                 android:id="@+id/textViewShoeDetailNameLabel"
@@ -30,17 +31,18 @@
 
             <EditText
                 android:id="@+id/editTextShoeDetailName"
-                android:text="@={newShoe.name}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:text="@={newShoe.name}" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
 
             <TextView
                 android:id="@+id/textViewShoeDetailCompanyLabel"
@@ -51,17 +53,18 @@
 
             <EditText
                 android:id="@+id/editTextShoeDetailCompany"
-                android:text="@={newShoe.company}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:text="@={newShoe.company}" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
 
             <TextView
                 android:id="@+id/textViewShoeDetailSizeLabel"
@@ -72,18 +75,19 @@
 
             <EditText
                 android:id="@+id/editTextShoeDetailSize"
-                android:text="@={`` + newShoe.size}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:importantForAutofill="no"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:text="@={`` + newShoe.size}" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
 
             <TextView
                 android:id="@+id/textViewShoeDetailDescriptionLabel"
@@ -94,18 +98,20 @@
 
             <EditText
                 android:id="@+id/editTextShoeDetailDescription"
-                android:text="@={newShoe.description}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:elegantTextHeight="false"
                 android:ems="10"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:text="@={newShoe.description}" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
 
             <Button
                 android:id="@+id/cancelButton"
@@ -115,9 +121,9 @@
 
             <Button
                 android:id="@+id/saveButton"
-                android:onClick="@{() -> shoeDetailFragment.onSave()}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> shoeDetailFragment.onSave()}"
                 android:text="@string/save_button" />
 
         </TableRow>

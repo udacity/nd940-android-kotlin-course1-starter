@@ -7,6 +7,7 @@ import android.view.*
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.view.ViewGroup.MarginLayoutParams
+import android.widget.LinearLayout
 import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
@@ -55,13 +56,13 @@ class ShoeListFragment : Fragment() {
     }
 
     private fun buildShoeListViews(shoeList : List<Shoe>) {
-         for (shoe in shoeList){
+        for (shoe in shoeList){
             //create a CardView for each shoe in viewModel.shoeList
             val shoeCard = CardView(requireContext())
             //set the layoutparams of the CardView
             val layoutParams = MarginLayoutParams(
-                    MATCH_PARENT,
-                    WRAP_CONTENT,
+                MATCH_PARENT,
+                WRAP_CONTENT,
             )
             //set the margins of the CardView
             val margin = convertDpToPixels(8).toInt()
@@ -73,41 +74,48 @@ class ShoeListFragment : Fragment() {
             //apply the layoutParams to the CardView
             shoeCard.layoutParams = layoutParams
 
-             val shoeCardTable = TableLayout(requireContext())
-             shoeCardTable.layoutParams = layoutParams
+            val shoeCardLinearLayout = LinearLayout(requireContext())
+            shoeCardLinearLayout.orientation = LinearLayout.VERTICAL
+            shoeCardLinearLayout.layoutParams = layoutParams
 
-             val shoeCardTableRow = TableRow(requireContext())
-             shoeCardTableRow.layoutParams = layoutParams
-             val shoeCardTableRow2 = TableRow(requireContext())
-             shoeCardTableRow2.layoutParams = layoutParams
+
 
             //create a TextView for the shoe name
             val nameText = TextView(requireContext())
             //set the text to the shoe name
             nameText.text = shoe.name
-            nameText.textSize = spToPx(50.0f, requireContext())
+            nameText.gravity = Gravity.START
+            nameText.textSize = spToPx(30.0f, requireContext())
 
-             //create a TextView for the shoe company
-             val companyText = TextView(requireContext())
-             //set the text to the shoe name
-             companyText.text = shoe.company
-             companyText.textSize = spToPx(20.0f, requireContext())
+            //create a TextView for the shoe company
+            val companyText = TextView(requireContext())
+            //set the text to the shoe name
+            companyText.text = shoe.company
+            companyText.textSize = spToPx(20.0f, requireContext())
+            companyText.gravity = Gravity.END
 
-             //create a TextView for the shoe size
-             val sizeText = TextView(requireContext())
-             //set the text to the shoe name
-             sizeText.text = shoe.size.toString()
-             sizeText.textSize = spToPx(10.0f, requireContext())
+            //create a TextView for the shoe size
+            val sizeText = TextView(requireContext())
+            //set the text to the shoe name
+            sizeText.text = shoe.size.toString()
+            sizeText.textSize = spToPx(15.0f, requireContext())
+            sizeText.gravity = Gravity.END
 
-             shoeCardTableRow.addView(nameText)
-             shoeCardTableRow2.addView(companyText)
-             shoeCardTableRow2.addView(sizeText)
-             shoeCardTable.addView(shoeCardTableRow)
-             shoeCardTable.addView(shoeCardTableRow2)
-             shoeCard.addView(shoeCardTable)
+            //create a TextView for the shoe description
+            val descriptionText = TextView(requireContext())
+            //set the text to the shoe name
+            descriptionText.text = shoe.description
+            descriptionText.textSize = spToPx(15.0f, requireContext())
+
+
+            shoeCardLinearLayout.addView(companyText)
+            shoeCardLinearLayout.addView(nameText)
+            shoeCardLinearLayout.addView(descriptionText)
+            shoeCardLinearLayout.addView(sizeText)
+            shoeCard.addView(shoeCardLinearLayout)
             //add the TextViews to the CardView
             //shoeCard.addView(nameText)
-//             shoeCard.addView(companyText)
+            //             shoeCard.addView(companyText)
 
             //add the CardView to the Linear Layout in the binding.
             binding.shoeListHolder.addView(shoeCard)

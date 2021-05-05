@@ -6,7 +6,7 @@
     <string name="password_field_label">password:</string>
     <string name="welcome_fragment_label">Welcome</string>
     <string name="welcome_header">Welcome</string>
-    <string name="welcome_content">To get started with browsing the shoe store please read the instructions first.</string>
+    <string name="welcome_content">To get started with browsing the shoe store inventory please read the instructions first.</string>
 
     <string name="instructions_button">Go to instructions</string>
     <string name="instructions_content">Instructions are here</string>
