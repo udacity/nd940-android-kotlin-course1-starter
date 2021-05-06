@@ -12,27 +12,26 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
+        <TextView style="@style/TextAppearance.AppCompat.Title"
             android:id="@+id/welcomeHeaderTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:layout_marginBottom="16dp"
             android:text="@string/welcome_header"
-            android:textAlignment="center"
-            android:textSize="30sp" />
+            android:textAlignment="center" />
+<!--            android:textSize="30sp" />-->
 
-        <TextView
+        <TextView style="@style/TextAppearance.AppCompat.Body1"
             android:id="@+id/welcomeContentTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:layout_marginBottom="16dp"
             android:text="@string/welcome_content"
-            android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textAlignment="center" />
 
-        <Button
+        <Button style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/instructionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -37,7 +37,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
-        <Button
+        <Button style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/registerButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
             app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
-        <Button
+        <Button style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/loginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,25 +55,23 @@
             app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
-        <TextView
+        <TextView style="@style/TextAppearance.AppCompat.Body1"
             android:id="@+id/emailLabelTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:labelFor="@id/editTextTextEmailAddress"
             android:text="@string/label_email_field"
-            android:textSize="18sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextTextEmailAddress"
             app:layout_constraintEnd_toStartOf="@+id/editTextTextEmailAddress" />
 
-        <TextView
+        <TextView style="@style/TextAppearance.AppCompat.Body1"
             android:id="@+id/passwordLabelTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:labelFor="@id/editTextTextPassword"
             android:text="@string/label_password_field"
-            android:textSize="18sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextTextPassword"
             app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword" />
 

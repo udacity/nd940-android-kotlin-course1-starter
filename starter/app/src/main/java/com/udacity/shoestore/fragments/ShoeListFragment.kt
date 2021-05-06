@@ -10,6 +10,7 @@ import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -79,6 +80,7 @@ class ShoeListFragment : Fragment() {
     private fun buildTextViewsInLinearLayout(shoeCardLinearLayout: LinearLayout, shoe: Shoe) {
         val companyTextView = createShoeTextView(shoe.company, Gravity.END, 20.0f)
         val nameTextView = createShoeTextView(shoe.name, Gravity.START, 30.0f)
+        nameTextView.setTextColor(ContextCompat.getColor(requireContext(), R.color.colorMainText))
         val descriptionTextView = createShoeTextView(shoe.description, Gravity.START, 15.0f)
         val sizeTextView = createShoeTextView(
             getString(

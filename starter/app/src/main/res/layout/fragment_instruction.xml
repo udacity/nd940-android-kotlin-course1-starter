@@ -10,7 +10,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
+        <TextView style="@style/TextAppearance.AppCompat.Title"
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,10 +19,9 @@
             android:layout_marginEnd="32dp"
             android:gravity="center"
             android:text="@string/instructions_fragment_header"
-            android:textAlignment="gravity"
-            android:textSize="30sp" />
+            android:textAlignment="gravity" />
 
-        <TextView
+        <TextView style="@style/TextAppearance.AppCompat.Body1"
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,10 +30,9 @@
             android:layout_marginEnd="32dp"
             android:gravity="center"
             android:text="@string/instructions_fragment_content"
-            android:textAlignment="gravity"
-            android:textSize="20sp" />
+            android:textAlignment="gravity" />
 
-        <Button
+        <Button style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/shoeListButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

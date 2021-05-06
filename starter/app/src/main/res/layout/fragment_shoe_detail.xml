@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -28,10 +29,12 @@
 
             <TextView
                 android:id="@+id/textViewShoeDetailNameLabel"
+                style="@style/TextAppearance.AppCompat.Body1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@id/editTextShoeDetailName"
-                android:text="@string/label_shoe_detail_name" />
+                android:text="@string/label_shoe_detail_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
             <EditText
                 android:id="@+id/editTextShoeDetailName"
@@ -40,7 +43,8 @@
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
-                android:text="@={viewModel.newShoe.name}" />
+                android:text="@={viewModel.newShoe.name}"
+                tools:text="Elite running shoe" />
         </TableRow>
 
         <TableRow
@@ -48,7 +52,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal">
 
-            <TextView
+            <TextView style="@style/TextAppearance.AppCompat.Body1"
                 android:id="@+id/textViewShoeDetailCompanyLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -62,7 +66,8 @@
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
-                android:text="@={viewModel.newShoe.company}" />
+                android:text="@={viewModel.newShoe.company}"
+                tools:text="Nike" />
         </TableRow>
 
         <TableRow
@@ -70,7 +75,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal">
 
-            <TextView
+            <TextView style="@style/TextAppearance.AppCompat.Body1"
                 android:id="@+id/textViewShoeDetailSizeLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,7 +89,8 @@
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="numberDecimal"
-                android:text="@={`` + viewModel.newShoe.size}" />
+                android:text="@={`` + viewModel.newShoe.size}"
+                tools:text="10.0" />
 
         </TableRow>
 
@@ -93,7 +99,7 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal">
 
-            <TextView
+            <TextView style="@style/TextAppearance.AppCompat.Body1"
                 android:id="@+id/textViewShoeDetailDescriptionLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -108,7 +114,8 @@
                 android:ems="10"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
-                android:text="@={viewModel.newShoe.description}" />
+                android:text="@={viewModel.newShoe.description}"
+                tools:text="Really cool shoes" />
 
         </TableRow>
 

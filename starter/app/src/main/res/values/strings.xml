@@ -24,7 +24,7 @@
     <string name="fab_content_description">Add shoe</string>
     <!-- ShoeDetail fragment -->
     <string name="label_shoe_detail_fragment">Shoe Details</string>
-    <string name="label_shoe_detail_name">Shoe name:</string>
+    <string name="label_shoe_detail_name">Name:</string>
     <string name="label_shoe_detail_company">Company:</string>
     <string name="label_shoe_detail_size">Size:</string>
     <string name="label_shoe_detail_description">Description:</string>
