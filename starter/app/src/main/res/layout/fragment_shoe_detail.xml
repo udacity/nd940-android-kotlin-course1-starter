@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@id/editTextShoeDetailName"
-                android:text="@string/shoe_detail_name" />
+                android:text="@string/label_shoe_detail_name" />
 
             <EditText
                 android:id="@+id/editTextShoeDetailName"
@@ -53,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@id/editTextShoeDetailCompany"
-                android:text="@string/shoe_detail_company" />
+                android:text="@string/label_shoe_detail_company" />
 
             <EditText
                 android:id="@+id/editTextShoeDetailCompany"
@@ -75,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@id/editTextShoeDetailSize"
-                android:text="@string/shoe_detail_size" />
+                android:text="@string/label_shoe_detail_size" />
 
             <EditText
                 android:id="@+id/editTextShoeDetailSize"
@@ -98,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@id/editTextShoeDetailDescription"
-                android:text="@string/shoe_detail_description" />
+                android:text="@string/label_shoe_detail_description" />
 
             <EditText
                 android:id="@+id/editTextShoeDetailDescription"
@@ -123,7 +123,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cancel_button" />
+                android:text="@string/button_cancel" />
 
             <Button
                 android:id="@+id/saveButton"
@@ -131,7 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="@{() -> shoeDetailFragment.onSave()}"
-                android:text="@string/save_button" />
+                android:text="@string/button_save" />
 
         </TableRow>
     </TableLayout>

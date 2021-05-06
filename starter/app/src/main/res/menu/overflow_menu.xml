@@ -5,7 +5,7 @@
 
     <item
         android:id="@+id/loginFragment"
-        android:title="@string/logout_menu_item"
+        android:title="@string/menu_item_logout"
         app:showAsAction="never"
         android:orderInCategory="1"
         />

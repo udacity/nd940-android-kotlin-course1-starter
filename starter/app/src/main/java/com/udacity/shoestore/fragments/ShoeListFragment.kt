@@ -57,6 +57,8 @@ class ShoeListFragment : Fragment() {
         item.isVisible = true
     }
 
+    //create the complete views necessary to display one shoe item and add them to the
+    //shoe list container in the binding
     private fun buildShoeListViews(shoeList: List<Shoe>) {
         //for every shoe in the viewModel shoeList LiveData
         for (shoe in shoeList) {
@@ -73,13 +75,14 @@ class ShoeListFragment : Fragment() {
         }
     }
 
+    //add the necessary TextViews to a given LinearLayout for a particular shoe item
     private fun buildTextViewsInLinearLayout(shoeCardLinearLayout: LinearLayout, shoe: Shoe) {
         val companyTextView = createShoeTextView(shoe.company, Gravity.END, 20.0f)
         val nameTextView = createShoeTextView(shoe.name, Gravity.START, 30.0f)
         val descriptionTextView = createShoeTextView(shoe.description, Gravity.START, 15.0f)
         val sizeTextView = createShoeTextView(
             getString(
-                R.string.shoe_list_fragment_shoe_size,
+                R.string.format_shoe_list_fragment_shoe_size,
                 (if (shoe.size == 0.0) {
                     "--.-"
                 } else {
@@ -96,7 +99,7 @@ class ShoeListFragment : Fragment() {
         shoeCardLinearLayout.addView(sizeTextView)
     }
 
-
+    //create and return a single empty card view set up for displaying one shoe item on the list
     private fun createShoeCardView(): CardView {
         val layoutParams = MarginLayoutParams(
             MATCH_PARENT,
@@ -120,6 +123,7 @@ class ShoeListFragment : Fragment() {
         return shoeCard
     }
 
+    //create and return the LinearLayout that goes inside a shoe item's CardView in the list
     private fun createLinearLayoutForShoeCard(): LinearLayout {
         val layoutParams = MarginLayoutParams(
             MATCH_PARENT,
@@ -131,6 +135,7 @@ class ShoeListFragment : Fragment() {
         return shoeCardLinearLayout
     }
 
+    //create and return a TextView with the given text, gravity and text size
     private fun createShoeTextView(text: String, gravity: Int, textSizeSP: Float): TextView {
         val textView = TextView(requireContext())
         textView.text = text
@@ -139,13 +144,14 @@ class ShoeListFragment : Fragment() {
         return textView
     }
 
+    //convert DP values to pixel values which scale with the display's pixel density
     private fun convertDpToPixels(dp: Int): Float {
         //Roman Mazur - https://stackoverflow.com/questions/4914039/margins-of-a-linearlayout-programmatically-with-dp
         val d = requireContext().resources.displayMetrics.density
         return (dp * d) // margin in pixels
     }
 
-
+    //convert SP values to pixel values which scale with the display's pixel density
     private fun spToPx(sp: Float, context: Context): Float {
         //AndroidEx - https://stackoverflow.com/questions/29664993/how-to-convert-dp-px-sp-among-each-other-especially-dp-and-sp
         return TypedValue.applyDimension(

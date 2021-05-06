@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/create_new_login_button"
+            android:text="@string/button_create_new_login"
             app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/login_button"
+            android:text="@string/button_login"
             app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:labelFor="@id/editTextTextEmailAddress"
-            android:text="@string/email_field_label"
+            android:text="@string/label_email_field"
             android:textSize="18sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextTextEmailAddress"
             app:layout_constraintEnd_toStartOf="@+id/editTextTextEmailAddress" />
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:labelFor="@id/editTextTextPassword"
-            android:text="@string/password_field_label"
+            android:text="@string/label_password_field"
             android:textSize="18sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextTextPassword"
             app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword" />

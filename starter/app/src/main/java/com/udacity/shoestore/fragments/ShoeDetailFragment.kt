@@ -40,7 +40,7 @@ class ShoeDetailFragment : Fragment() {
         if (viewModel.newShoe.name == "") {
             Toast.makeText(
                 requireActivity(),
-                R.string.blank_shoe_warning_toast,
+                R.string.warning_toast_blank_shoe,
                 Toast.LENGTH_SHORT
             )
                 .show()
