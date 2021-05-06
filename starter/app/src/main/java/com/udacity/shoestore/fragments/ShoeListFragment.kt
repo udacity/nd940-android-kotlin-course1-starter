@@ -23,21 +23,26 @@ import com.udacity.shoestore.models.ShoeViewModel
 class ShoeListFragment : Fragment() {
 
     private lateinit var binding: FragmentShoeListBinding
-    private val viewModel : ShoeViewModel by activityViewModels()
+    private val viewModel: ShoeViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         binding = DataBindingUtil.inflate(
-                inflater, R.layout.fragment_shoe_list, container, false)
+            inflater, R.layout.fragment_shoe_list, container, false
+        )
 
-        binding.fab.setOnClickListener(Navigation.createNavigateOnClickListener(
+        binding.fab.setOnClickListener(
+            Navigation.createNavigateOnClickListener(
                 R.id.action_shoeListFragment_to_shoeDetailFragment
-        ))
+            )
+        )
 
         viewModel.shoeListLiveData.observe(viewLifecycleOwner, {
             buildShoeListViews(it)
@@ -52,9 +57,9 @@ class ShoeListFragment : Fragment() {
         item.isVisible = true
     }
 
-    private fun buildShoeListViews(shoeList : List<Shoe>) {
+    private fun buildShoeListViews(shoeList: List<Shoe>) {
         //for every shoe in the viewModel shoeList LiveData
-        for (shoe in shoeList){
+        for (shoe in shoeList) {
             //create card view
             val shoeCard = createShoeCardView()
             //create linear layout for inside shoeCard
@@ -68,19 +73,22 @@ class ShoeListFragment : Fragment() {
         }
     }
 
-    private fun buildTextViewsInLinearLayout(shoeCardLinearLayout: LinearLayout, shoe : Shoe) {
+    private fun buildTextViewsInLinearLayout(shoeCardLinearLayout: LinearLayout, shoe: Shoe) {
         val companyTextView = createShoeTextView(shoe.company, Gravity.END, 20.0f)
         val nameTextView = createShoeTextView(shoe.name, Gravity.START, 30.0f)
         val descriptionTextView = createShoeTextView(shoe.description, Gravity.START, 15.0f)
         val sizeTextView = createShoeTextView(
-            getString(R.string.shoe_list_fragment_shoe_size,
+            getString(
+                R.string.shoe_list_fragment_shoe_size,
                 (if (shoe.size == 0.0) {
                     "--.-"
                 } else {
                     shoe.size.toString()
-                })),
+                })
+            ),
             Gravity.END,
-            15.0f)
+            15.0f
+        )
 
         shoeCardLinearLayout.addView(companyTextView)
         shoeCardLinearLayout.addView(nameTextView)
@@ -89,7 +97,7 @@ class ShoeListFragment : Fragment() {
     }
 
 
-    private fun createShoeCardView() : CardView {
+    private fun createShoeCardView(): CardView {
         val layoutParams = MarginLayoutParams(
             MATCH_PARENT,
             WRAP_CONTENT,
@@ -112,7 +120,7 @@ class ShoeListFragment : Fragment() {
         return shoeCard
     }
 
-    private fun createLinearLayoutForShoeCard() : LinearLayout {
+    private fun createLinearLayoutForShoeCard(): LinearLayout {
         val layoutParams = MarginLayoutParams(
             MATCH_PARENT,
             WRAP_CONTENT,
@@ -123,7 +131,7 @@ class ShoeListFragment : Fragment() {
         return shoeCardLinearLayout
     }
 
-    private fun createShoeTextView(text: String, gravity : Int, textSizeSP : Float): TextView {
+    private fun createShoeTextView(text: String, gravity: Int, textSizeSP: Float): TextView {
         val textView = TextView(requireContext())
         textView.text = text
         textView.gravity = gravity
@@ -131,7 +139,7 @@ class ShoeListFragment : Fragment() {
         return textView
     }
 
-    private fun convertDpToPixels(dp: Int) : Float {
+    private fun convertDpToPixels(dp: Int): Float {
         //Roman Mazur - https://stackoverflow.com/questions/4914039/margins-of-a-linearlayout-programmatically-with-dp
         val d = requireContext().resources.displayMetrics.density
         return (dp * d) // margin in pixels
@@ -140,7 +148,11 @@ class ShoeListFragment : Fragment() {
 
     private fun spToPx(sp: Float, context: Context): Float {
         //AndroidEx - https://stackoverflow.com/questions/29664993/how-to-convert-dp-px-sp-among-each-other-especially-dp-and-sp
-        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, sp, context.resources.displayMetrics)
+        return TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_PX,
+            sp,
+            context.resources.displayMetrics
+        )
     }
 
 }
