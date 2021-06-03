@@ -1,10 +1,6 @@
-# README Template
+# Totally Real Classic Game Store
 
-Below is a template provided for use when building your README file for students.
-
-# Project Title
-
-Project description goes here.
+This is an app for a retro video game store that is totally, 100% real! Well, of course, it isn't actually real, that was a lie and I apologize. In actuality, this is an app I created to demonstrate my understanding of the core concepts of layouts, app navigation, the activity and fragment lifecycles, and UI layer application architecture patterns taught in Developing Android Apps with Kotlin - Part 1 of the [Udacity Android Kotlin Developer nanodegree program](https://www.udacity.com/course/android-kotlin-developer-nanodegree--nd940).
 
 ## Getting Started
 
