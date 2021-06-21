@@ -2,6 +2,9 @@
     <string name="app_name">ShoeStore</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="login_btn">NEW LOGIN</string>
-    <string name="account_bnt">EXISTING ACCOUNT</string>
+    <string name="login_btn">New Login</string>
+    <string name="account_bnt">Existing Account</string>
+    <string name="welcome">Welcome!</string>
+    <string name="introduction">This is the introduction text</string>
+    <string name="instructions">Instructions</string>
 </resources>
