@@ -7,4 +7,5 @@
     <string name="welcome">Welcome!</string>
     <string name="introduction">This is the introduction text</string>
     <string name="instructions">Instructions</string>
+    <string name="instructions_content">These are the instructions for using this app...</string>
 </resources>
