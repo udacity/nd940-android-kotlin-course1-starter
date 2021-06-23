@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_sides"
-        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginTop="@dimen/top_parent_margin"
         android:layout_marginRight="@dimen/margin_sides"
         android:text="@string/instructions"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,4 +29,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/instructionTextView" />
+
+    <Button
+        android:id="@+id/shoeListButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_sides"
+        android:layout_marginTop="@dimen/top_parent_margin"
+        android:layout_marginRight="@dimen/margin_sides"
+        android:text="@string/shoe_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.638"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsTextView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
