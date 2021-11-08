@@ -6,4 +6,7 @@
     <string name="submit">Submit</string>
     <string name="not_already_registered">Not already registered?</string>
     <string name="register">Register For Free</string>
+    <string name="welcome_to_shoe_stop">Welcome to Shoe Stop!</string>
+    <string name="welcome_message"><![CDATA[This is the one-stop-shop for all your shoe needs. You want nikes? We got it! Yeeezys? CHECK! If you are a sneaker head, click the button below and lets get sneakin\']]></string>
+    <string name="continue_btn">Continue</string>
 </resources>
