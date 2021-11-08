@@ -17,8 +17,7 @@ class MainActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.shoe_password)
         val btnLogin = findViewById<Button>(R.id.btn_login)
         val btnRegister = findViewById<Button>(R.id.btn_register)
-
-        // set onClickListener on the login button
+//
 //        btnLogin.setOnClickListener{
 //            val username = username.text
 //            val password = password.text

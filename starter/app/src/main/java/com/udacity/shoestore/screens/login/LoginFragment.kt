@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.DataBindingUtil.inflate
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.LoginFragmentBinding
 
@@ -17,6 +18,7 @@ public class LoginFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
+
         // Inflate view and obtain an instance of the binding class
         binding = DataBindingUtil.inflate(
             inflater,
@@ -24,6 +26,12 @@ public class LoginFragment : Fragment() {
             container,
             false
         )
+        binding.btnLogin.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragment2ToWelcomeFragment())
+        }
+        binding.btnRegister.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragment2ToWelcomeFragment())
+        }
         return binding.root
     }
 
