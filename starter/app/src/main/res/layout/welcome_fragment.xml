@@ -18,7 +18,7 @@
             <TextView
                 android:text="@string/welcome_to_shoe_stop"
                 android:textSize="30sp"
-                android:layout_marginLeft="20sp"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView

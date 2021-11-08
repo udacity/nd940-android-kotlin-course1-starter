@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/login"
+            android:gravity="center"
             android:textSize="30sp"/>
 
         <EditText
@@ -28,7 +29,7 @@
             android:autofillHints="username"
             android:hint="@string/username"
             android:textAlignment="center"
-            android:layout_width="match_parent"
+            android:layout_width="250sp"
             android:layout_height="wrap_content" />
 
         <EditText
@@ -37,7 +38,7 @@
             android:hint="@string/password"
             android:inputType="textPassword"
             android:textAlignment="center"
-            android:layout_width="match_parent"
+            android:layout_width="250sp"
             android:layout_height="wrap_content" />
 
         <Button

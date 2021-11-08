@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/layout/instructions_fragment.xml" value="0.11220871327254306" />
         <entry key="app/src/main/res/layout/login_layout.xml" value="0.11220871327254306" />
         <entry key="app/src/main/res/layout/shoe_detail_fragment.xml" value="0.11220871327254306" />

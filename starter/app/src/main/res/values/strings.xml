@@ -9,4 +9,6 @@
     <string name="welcome_to_shoe_stop">Welcome to Shoe Stop!</string>
     <string name="welcome_message"><![CDATA[This is the one-stop-shop for all your shoe needs. You want nikes? We got it! Yeeezys? CHECK! If you are a sneaker head, click the button below and lets get sneakin\']]></string>
     <string name="continue_btn">Continue</string>
+    <string name="instructions">Instructions</string>
+    <string name="instructions_detail">When accessing the next screen, you can either choose to scroll through the list of shoes, or add in your favorite shoes to the list!</string>
 </resources>
