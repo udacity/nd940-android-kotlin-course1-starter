@@ -55,6 +55,14 @@ dependencies {
     implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0-rc02"
     implementation "android.arch.navigation:navigation-ui-ktx:1.0.0-rc02"
 
+    // nav controller
+    def nav_version_ktx = "2.1.0-alpha06"
+
+    // kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version_ktx"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version_ktx"
+
     // Material package
     implementation 'com.google.android.material:material:1.1.0'
+
 }
