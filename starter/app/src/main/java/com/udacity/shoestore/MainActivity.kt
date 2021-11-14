@@ -3,7 +3,8 @@ package com.udacity.shoestore
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.widget.Toolbar
+import android.view.View
+import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
@@ -29,6 +30,12 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
+        // assigning ID of the toolbar to a var
+        val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
+
+        // using toolbar as an ActionBar
+        setSupportActionBar(toolbar)
+
         // reference: https://medium.com/@ermarajhussain/how-to-work-with-navigation-controller-in-android-with-kotlin-part-2-152aa6dc3839
         navController = Navigation.findNavController(this@MainActivity,
             R.id.nav_host_fragment
@@ -46,10 +53,10 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.activity_main_drawer, menu)
         return true
     }
-//
+
 //    override fun onSupportNavigateUp(): Boolean {
 //        val navController = findNavController(R.id.nav_host_fragment)
-//        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+//        return navController.navigateUp()
 //    }
 
 }
