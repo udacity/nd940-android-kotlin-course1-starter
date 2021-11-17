@@ -11,4 +11,9 @@
     <string name="continue_btn">Continue</string>
     <string name="instructions">Instructions</string>
     <string name="instructions_detail">When accessing the next screen, you can either choose to scroll through the list of shoes, or add in your favorite shoes to the list!</string>
+    <string name="new_shoe">New Shoe</string>
+    <string name="shoe_style_name">The shoe\'s style name</string>
+    <string name="shoe_company">The company that makes the shoe</string>
+    <string name="shoe_size">What size is the shoe?</string>
+    <string name="shoe_description">How would you describe the shoe?</string>
 </resources>

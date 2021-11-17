@@ -61,13 +61,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     // navigate to the destination upon selection of a menu item
+    // resource for below fn: https://stackoverflow.com/questions/60682102/how-to-navigate-to-a-fragment-on-menu-item-click-using-android-jetpack-navigatio
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
 
-//    override fun onSupportNavigateUp(): Boolean {
-//        val navController = findNavController(R.id.nav_host_fragment)
-//        return navController.navigateUp()
-//    }
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment)
+        return navController.navigateUp()
+    }
 
 }
