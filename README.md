@@ -1,52 +1,30 @@
-# README Template
-
-Below is a template provided for use when building your README file for students.
+# README File
 
 # Project Title
 
-Project description goes here.
+Simple Shoe store inventory app. I created this Android app for the purposes of the Udacity's Developing Android Apps with Kotlin Nanodegree Program to showcase my skills in Android developement.
 
 ## Getting Started
 
-Instructions for how to get a copy of the project running on your local machine.
+* Clone the repo.
+* Open Android Studio.
+* Select Open an Existing Project.
+* Locate the project folder and click Open.
+* Click the Run button.
 
-### Dependencies
+## Some of the Technologies and Techniques Used
 
-```
-Examples here
-```
+* [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
+* [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) 
+* [DataBinding](https://developer.android.com/topic/libraries/data-binding)
+* [NavigationComponent](https://developer.android.com/guide/navigation/navigation-getting-started)
+* [ConstraintLayout](https://developer.android.com/training/constraint-layout)
 
-### Installation
+## ScreenShots
+![image](https://user-images.githubusercontent.com/42949982/185769893-5e6e8c55-0613-44b0-8d43-de1ac685f063.png)
+![image](https://user-images.githubusercontent.com/42949982/185769901-f52ead25-6451-4ce6-b7fa-b13f9a8af7c6.png)
+![image](https://user-images.githubusercontent.com/42949982/185769907-2d951459-aa92-4b6e-a738-a09207dca4cf.png)
+![image](https://user-images.githubusercontent.com/42949982/185769918-608fc5b1-6e69-49c5-8b1d-ce42aad512d9.png)
+![image](https://user-images.githubusercontent.com/42949982/185769926-c853ea44-0308-401e-9f70-8e03c4c431e3.png)
+![image](https://user-images.githubusercontent.com/42949982/185769936-c7ae6682-94af-41f6-9165-94d1cacd9eb9.png)
 
-Step by step explanation of how to get a dev environment running.
-
-List out the steps
-
-```
-Give an example here
-```
-
-## Testing
-
-Explain the steps needed to run any automated tests
-
-### Break Down Tests
-
-Explain what each test does and why
-
-```
-Examples here
-```
-## Project Instructions
-
-This section should contain all the student deliverables for this project.
-
-## Built With
-
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
-
-Include all items used to build project.
-
-## License
