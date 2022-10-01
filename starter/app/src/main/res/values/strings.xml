@@ -2,4 +2,5 @@
     <string name="app_name">ShoeStore</string>
     <string name="email_hint">abc@example.com</string>
     <string name="password_hint">Password</string>
+    <string name="navigate_to_shoes_detail">Navigate To Shoes Detail</string>
 </resources>
