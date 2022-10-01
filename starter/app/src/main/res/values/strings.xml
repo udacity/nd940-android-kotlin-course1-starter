@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="email_hint">abc@example.com</string>
+    <string name="password_hint">Password</string>
 </resources>
