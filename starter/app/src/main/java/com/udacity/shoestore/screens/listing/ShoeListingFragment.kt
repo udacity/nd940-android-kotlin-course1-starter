@@ -1,13 +1,14 @@
 package com.udacity.shoestore.screens.listing
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.view.*
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListingBinding
-import com.udacity.shoestore.databinding.FragmentWelcomeBinding
+
 
 class ShoeListingFragment : Fragment() {
     private lateinit var binding: FragmentShoeListingBinding
@@ -39,5 +40,19 @@ class ShoeListingFragment : Fragment() {
 
     private fun onNavigateToShoeDetail() {
         findNavController().navigate(ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailFragment())
+    }
+
+    private fun addNewShoe(){
+        val listLinearLayout: LinearLayout = binding.listLinearLayout
+
+        val newShoe = TextView(context)
+        newShoe.setLayoutParams(
+            LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            )
+        )
+
+        listLinearLayout.addView(newShoe)
     }
 }

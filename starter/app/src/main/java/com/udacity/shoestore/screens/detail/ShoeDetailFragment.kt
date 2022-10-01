@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.databinding.FragmentShoeListingBinding
@@ -19,6 +20,17 @@ class ShoeDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentShoeDetailBinding.inflate(inflater)
+
+        binding.detailCancelBtn.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
+        binding.detailSaveBtn.setOnClickListener {
+            val newShoe = binding.newShoeEt.text.toString()
+            findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment(newShoe))
+        }
+
+
         return binding.root
     }
 }

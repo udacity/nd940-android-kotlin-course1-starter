@@ -4,4 +4,8 @@
     <string name="password_hint">Password</string>
     <string name="navigate_to_shoes_detail">Navigate To Shoes Detail</string>
     <string name="logout">Logout</string>
+    <string name="shoe_name_company_size_and_description">Shoe Name, Company, Size and Description</string>
+    <string name="name_company_size_description_hint">name;company;size;description</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
 </resources>
