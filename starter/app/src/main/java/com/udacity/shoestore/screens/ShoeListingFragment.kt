@@ -29,9 +29,9 @@ class ShoeListingFragment : Fragment() {
         }
 
         val navArgs by navArgs<ShoeListingFragmentArgs>()
-//        if (navArgs.shoe.isNotEmpty()) {
-//            viewModel.addShoe(navArgs.shoe)
-//        }
+        if (navArgs.shoe != null) {
+            viewModel.addShoe(navArgs.shoe!!)
+        }
         viewModel.shoes.observe(viewLifecycleOwner, Observer { shoes ->
             shoes.forEach {
                 addNewShoe(it)
@@ -57,11 +57,11 @@ class ShoeListingFragment : Fragment() {
         findNavController().navigate(ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailFragment())
     }
 
-    private fun addNewShoe(shoe: String){
+    private fun addNewShoe(shoe: Shoe){
         val listLinearLayout: LinearLayout = binding.listLinearLayout
 
         val newShoe = TextView(context)
-        newShoe.text = shoe
+        newShoe.text = shoe.name
         newShoe.setLayoutParams(
             LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
