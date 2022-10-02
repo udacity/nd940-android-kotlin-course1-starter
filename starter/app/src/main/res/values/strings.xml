@@ -4,8 +4,14 @@
     <string name="password_hint">Password</string>
     <string name="navigate_to_shoes_detail">Navigate To Shoes Detail</string>
     <string name="logout">Logout</string>
-    <string name="shoe_name_company_size_and_description">Give new shoe a name</string>
-    <string name="name_company_size_description_hint">Eg. Sick Shoe</string>
+    <string name="shoe_name">Shoe name</string>
+    <string name="shoe_size">Shoe size</string>
+    <string name="shoe_company">Shoe company</string>
+    <string name="shoe_description">Shoe description</string>
+    <string name="shoe_name_hint">Eg. Sick Shoe</string>
+    <string name="shoe_size_hint">Eg. 12</string>
+    <string name="shoe_company_hint">Eg. Nike</string>
+    <string name="shoe_description_hint">Eg. Very very slick.</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
     <string name="shoe_list">Show List</string>

@@ -48,7 +48,9 @@
             app:destination="@id/shoeDetailFragment" />
         <argument
             android:name="shoe"
-            app:argType="string" />
+            app:argType="com.udacity.shoestore.models.Shoe"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/shoeDetailFragment"
