@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.udacity.shoestore.screens.login.LoginFragment"
+        android:name="com.udacity.shoestore.screens.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.udacity.shoestore.screens.welcome.WelcomeFragment"
+        android:name="com.udacity.shoestore.screens.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/instructionFragment"
-        android:name="com.udacity.shoestore.screens.instruction.InstructionFragment"
+        android:name="com.udacity.shoestore.screens.InstructionFragment"
         android:label="fragment_instruction"
         tools:layout="@layout/fragment_instruction" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/shoeListingFragment"
-        android:name="com.udacity.shoestore.screens.listing.ShoeListingFragment"
+        android:name="com.udacity.shoestore.screens.ShoeListingFragment"
         android:label="fragment_shoe_listing"
         tools:layout="@layout/fragment_shoe_listing" >
         <action
@@ -48,12 +48,11 @@
             app:destination="@id/shoeDetailFragment" />
         <argument
             android:name="shoe"
-            app:argType="string"
-            android:defaultValue="empty" />
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/shoeDetailFragment"
-        android:name="com.udacity.shoestore.screens.detail.ShoeDetailFragment"
+        android:name="com.udacity.shoestore.screens.ShoeDetailFragment"
         android:label="fragment_shoe_detail"
         tools:layout="@layout/fragment_shoe_detail" >
         <action

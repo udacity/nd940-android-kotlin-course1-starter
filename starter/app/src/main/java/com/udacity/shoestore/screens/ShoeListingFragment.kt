@@ -1,18 +1,23 @@
-package com.udacity.shoestore.screens.listing
+package com.udacity.shoestore.screens
 
 import android.os.Bundle
 import android.view.*
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
+import com.udacity.shoestore.MainViewModel
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListingBinding
+import com.udacity.shoestore.models.Shoe
 
 
 class ShoeListingFragment : Fragment() {
     private lateinit var binding: FragmentShoeListingBinding
-    private lateinit var viewModel: ShoeListingViewModel
+    private val viewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,6 +28,14 @@ class ShoeListingFragment : Fragment() {
             onNavigateToShoeDetail()
         }
         setHasOptionsMenu(true)
+
+        val navArgs by navArgs<ShoeListingFragmentArgs>()
+        if (navArgs.shoe.isNotEmpty()) viewModel.addShoe(navArgs.shoe)
+        viewModel.shoes.observe(this, Observer { shoes ->
+            shoes.forEach {
+                addNewShoe(it)
+            }
+        })
         return binding.root
     }
 
@@ -42,10 +55,11 @@ class ShoeListingFragment : Fragment() {
         findNavController().navigate(ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailFragment())
     }
 
-    private fun addNewShoe(){
+    private fun addNewShoe(shoe: String){
         val listLinearLayout: LinearLayout = binding.listLinearLayout
 
         val newShoe = TextView(context)
+        newShoe.text = shoe
         newShoe.setLayoutParams(
             LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
