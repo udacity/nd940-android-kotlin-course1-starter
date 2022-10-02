@@ -13,6 +13,7 @@ import com.udacity.shoestore.MainViewModel
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListingBinding
 import com.udacity.shoestore.models.Shoe
+import timber.log.Timber
 
 
 class ShoeListingFragment : Fragment() {
@@ -48,7 +49,8 @@ class ShoeListingFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.listing_logout) {
-            findNavController().popBackStack()
+            findNavController().navigateUp()
+            return true
         }
         return super.onOptionsItemSelected(item)
     }
