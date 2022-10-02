@@ -27,17 +27,17 @@ class ShoeListingFragment : Fragment() {
         binding.floatingActionButton.setOnClickListener {
             onNavigateToShoeDetail()
         }
-        setHasOptionsMenu(true)
 
         val navArgs by navArgs<ShoeListingFragmentArgs>()
-        if (navArgs.shoe.isNotEmpty()) {
-            viewModel.addShoe(navArgs.shoe)
-        }
+//        if (navArgs.shoe.isNotEmpty()) {
+//            viewModel.addShoe(navArgs.shoe)
+//        }
         viewModel.shoes.observe(viewLifecycleOwner, Observer { shoes ->
             shoes.forEach {
                 addNewShoe(it)
             }
         })
+        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -47,12 +47,10 @@ class ShoeListingFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        super.onOptionsItemSelected(item)
         if (item.itemId == R.id.listing_logout) {
             findNavController().popBackStack()
-            return true
         }
-        return false
+        return super.onOptionsItemSelected(item)
     }
 
     private fun onNavigateToShoeDetail() {

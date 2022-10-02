@@ -45,7 +45,9 @@
         tools:layout="@layout/fragment_shoe_listing" >
         <action
             android:id="@+id/action_shoeListingFragment_to_shoeDetailFragment"
-            app:destination="@id/shoeDetailFragment" />
+            app:destination="@id/shoeDetailFragment"
+            app:popUpTo="@id/shoeListingFragment"
+            app:popUpToInclusive="true" />
         <argument
             android:name="shoe"
             app:argType="com.udacity.shoestore.models.Shoe"
@@ -59,6 +61,8 @@
         tools:layout="@layout/fragment_shoe_detail" >
         <action
             android:id="@+id/action_shoeDetailFragment_to_shoeListingFragment"
-            app:destination="@id/shoeListingFragment" />
+            app:destination="@id/shoeListingFragment"
+            app:popUpTo="@id/shoeListingFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

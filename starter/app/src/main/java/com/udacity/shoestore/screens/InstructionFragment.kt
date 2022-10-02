@@ -23,6 +23,6 @@ class InstructionFragment : Fragment() {
     }
 
     private fun onNavigateToShoeListing(){
-        findNavController().navigate(InstructionFragmentDirections.actionInstructionFragmentToShoeListingFragment(""))
+        findNavController().navigate(InstructionFragmentDirections.actionInstructionFragmentToShoeListingFragment())
     }
 }

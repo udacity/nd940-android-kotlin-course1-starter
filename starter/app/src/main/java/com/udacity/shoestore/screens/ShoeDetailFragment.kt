@@ -21,10 +21,10 @@ class ShoeDetailFragment : Fragment() {
             findNavController().popBackStack()
         }
 
-        binding.detailSaveBtn.setOnClickListener {
-            val newShoe = binding.newShoeEt.text.toString()
-            findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment(newShoe))
-        }
+//        binding.detailSaveBtn.setOnClickListener {
+//            val newShoe = binding.newShoeEt.text.toString()
+//            findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment(newShoe))
+//        }
 
 
         return binding.root
