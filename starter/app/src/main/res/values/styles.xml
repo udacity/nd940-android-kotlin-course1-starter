@@ -7,13 +7,58 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="login_title">
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">34sp</item>
+    </style>
+    <style name="login_subtitle">
+        <item name="android:textColor">@color/white</item>
+         <item name="fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+    <style name="input_him_text">
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/whiteGray</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="default_text_style">
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="text_bold">
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="welcome">
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">64sp</item>
+    </style>
+    <style name="welcome_subtitle">
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="you">
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">44sp</item>
+    </style>
 
 </resources>

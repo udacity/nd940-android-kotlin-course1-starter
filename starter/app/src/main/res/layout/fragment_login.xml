@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".LoginFragment">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/login_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_title"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/login_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/login_description"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        style="@style/input_him_text"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/input_decoration"
+        android:hint="@string/phone_or_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/editText2"
+        style="@style/input_him_text"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input_decoration"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="26dp"
+        style="@style/default_text_style"
+        app:layout_constraintStart_toStartOf="@id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/dont_have_account"
+        app:layout_constraintBottom_toTopOf="@id/button"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/text_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+        <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/signIn"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_rounded"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
