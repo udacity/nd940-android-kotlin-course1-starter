@@ -37,6 +37,18 @@ android {
 }
 
 dependencies {
+    // Navigation Version
+    def nav_version = "2.5.3"
+    // Kotlin Navigation Dependencies
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    // Navigation - Feature Module Support
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
+    // Navigation - Jetpack Compose Integration
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+    // Testing Navigation
+    androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.5.1'

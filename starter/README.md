@@ -1,78 +1,72 @@
 # The Shoe Store
 
-This project will consist of five screens. You don't have to create a shoe store, you can use any other item as long as you create the following screens. You will be creating:
+This project will consist of five screens. You do not have to create a shoe store, you can use any other item (e.g., a book store), as long as you create the following screens:
 
-1. Login screen: Email and password fields and labels plus create and login buttons
-2. Welcome onboarding screen
-3. Instructions onboarding screen
-4. Shoe Listing screen
-5. Shoe Detail screen for adding a new shoe
+1. Login screen - This screen will be comprised of "Email" and "Password" fields and labels, as well as "Create" and "Login" buttons. Redirects to the Welcome (onboarding) screen.
+2. Welcome (onboarding) screen - This screen will be comprised of two TextViews w/ text of choice and a "Go to Instructions" button. Redirects to the Instructions (onboarding) screen.
+3. Instructions (onboarding) screen - This screen will be comprised of two TextViews w/ text of choice and a "Go to Shoe List" button. Redirects to the Shoe Listing screen.
+4. Shoe Listing screen - This screen will be comprised of a ScrollView w/ a LinearLayout within the ScrollView and will contain the list of shoes that have been added to the inventory. Additionally, there will be a FloatingActionButton that will redirect to the Shoe Detail screen (i.e., "Go to Shoe Detail") as well as a "Logout" menu (button) (within a navigation drawer) that redirects to the Login screen.
+5. Shoe Detail screen (for adding a new shoe) - This screen will be comprised of a TextView label and EditView for the "Shoe Name", "Company", "Shoe Size" and "Description". Additionally, there will be a "Save" button that redirects to the Shoe List screen and adds a new shoe to the Shoe ViewModel. Also, there will be a "Cancel" button that redirects to the Shoe List screen.
 
 ## Getting Started
 
-Open the starter project in the latest stable version of Android Studio.
+### Steps
 
-Open the starter project in Android Studio
+1. Open the [starter project](https://github.com/udacity/nd940-android-kotlin-course1-starter) from the GitHub repo in Android Studio
+<br></br>
+2. Add the navigation libraries to the app `build.gradle` file
+<br></br>
+3. Add the safe-arg plugin to the main and app `build.gradle` file
+<br></br>
+4. Set `DataBindingUtil` in `build.gradle`
+<br></br>
+5. Use `DataBindingUtil` to inflate every layout
+<br></br>
+6. Create a new navigation (graph) XML file
+<br></br>
+7. Create a new Login screen (destination) that includes:
 
-##Steps
-
-1. Open the starter project in Android Studio
-
-2. Add the navigation libraries to the app build.gradle file
-
-3. Add the safe-arg plugin to the main and app build.gradle file
-
-4. Create a new navigation xml file
-
-5. Create a new Login destination.
-
-   * Include email and password labels 
-
-   - Include email and password fields
-   - Create buttons for creating a new login and logging in with an existing account
-   - Clicking either button should navigate to the Welcome Screen.
-
-6. Create a new Welcome screen destination that includes:
-
-   * A new layout
-   * At least 2 textviews
-   * A navigation button with actions to navigate to the instructions screen
-
-7. Create a new Instruction destination that includes:
-
-   * A new layout
-   * At least 2 textviews
-   * A navigation button with actions to navigate to the shoe list screen
-
-8. Create a class that extends ViewModel
-
-   *  Use a LiveData field that returns the list of shoes
-
-9. Create a new Shoe List destination that includes:
-
-   * A new layout
-   * A ScrollView
-   * A LinearLayout for Shoe Items
-   * A FloatingActionButton with an action to navigate to the shoe detail screen
-
-10. In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration.
-
-11. Create a new Shoe Detail destination that includes:
+    * Include "Email" and "Password" labels
+    * Include "Email" and "Password" fields
+    * Create buttons for creating a new login (i.e., "Create") and logging in with an existing account (i.e., "Login")
+    * Clicking either button should navigate to the Welcome screen
+<br></br>
+8. Create a new Welcome (onboarding) screen (destination) that includes:
 
     * A new layout
-    * A TextView label and EditView for the
-      * Shoe Name
-      * Company
-      * Shoe Size
-      * Description
-    * A Cancel button with an action to navigate back to the shoe list screen
-    * A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
+    * At least 2 TextViews and use any text you would like
+    * A navigation button with actions to navigate to the Instructions (onboarding) screen (i.e., "Go to Instructions")
+<br></br>
+9. Create a new Instructions (onboarding) screen (destination) that includes:
 
-12. Make sure you can’t go back to onboarding screens
+    * A new layout
+    * At least 2 TextViews with appropriate information
+    * A navigation button with actions to navigate to the Shoe List screen (i.e., "Go to Shoe List")
+<br></br>
+10. Create a class that extends `ViewModel`
 
-13. In the Shoe List screen:
+    * Use a `LiveData` field that returns the list of shoes
+<br></br>
+11. Create a new Shoe List screen (destination) that includes:
 
-    * Use an Activity level ViewModel to hold a list of Shoes (use by activityViewModels)
-    * Observe the shoes variable from the ViewModel
-    * Use DataBindingUtil to inflate the shoe_list layout
-    * Add a new layout item into the scrollview for each shoe.
+    * A new layout
+    * A `ScrollView`
+    * A `LinearLayout` inside the `ScrollView` for shoe items
+    * A `FloatingActionButton` with an action to navigate to the Shoe Detail screen (i.e., "Go to Shoe Detail")
+<br></br>
+12. In `MainActivity`, setup the nav controller with the toolbar and an `AppBarConfiguration`
+<br></br>
+13. In the Shoe List screen, add a Logout menu (button). This Logout menu (button) will appear only on the Shoe List screen and will return the user to the Login screen
+<br></br>
+14. Create a new Shoe Detail screen (destination) that includes:
+
+    * A new layout
+    * A `TextView` label and `EditView` for the "Shoe Name", "Company", "Shoe Size" and "Description"
+    * A "Cancel" button with an action to navigate back to the Shoe List screen
+    * A "Save" button with an action to navigate back to the Shoe List screen and add a new shoe to the Shoe ViewModel
+<br></br>
+15. Make sure you cannot go back to the onboarding screens in the Shoe List screen:
+
+    * Use an Activity level `ViewModel` to hold a list of shoes (Shoes) (use by `activityViewModels`)
+    * Observe the shoes variable from the `ViewModel`
+    * Add a new layout item into the ScrollView for each shoe
