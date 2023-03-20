@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="email">Email</string>
+    <string name="enter_your_email_address">Enter Your Email Address</string>
+    <string name="email_example">email@email.com</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="login_button">Login</string>
+    <string name="create_account_button">Create Account</string>
+    <string name="about_text">This shoe store inventory app is a powerful tool for managing stock levels, tracking sales, and providing customers with real-time information about products and their availability. With this app, users can easily add new products, update pricing and inventory levels, and view detailed sales reports to help optimize their business. Customers can also benefit from the app by checking product availability, viewing product details, and making purchases directly from their mobile devices. With a shoe store inventory app, managing your business has never been easier or more convenient.</string>
+    <string name="about_title">About Shoe Store Inventory App</string>
+    <string name="go_to_instructions_button">Go to Instructions</string>
+    <string name="instructions">Instructions</string>
+    <string name="instructions_title">Instructions</string>
+    <string name="shoe_list_instructions_text">On the next screen (i.e., the Shoe List screen), you will find a list of shoes that have been added to the inventory. The list will include the shoe\'s name, company, size, and a brief description. Additionally, there will be a floating action button that will allow you to add shoes to the inventory.</string>
+    <string name="shoe_detail_instructions_text">Clicking on the floating action button on the Shoe List screen will take you to the Shoe Detail screen. On the Shoe Detail Screen, you will be able to add a new shoe to the inventory by entering the shoe\'s name, company, size, a brief description, and then clicking on the "Save" button. Clicking on the "Cancel" button will return you to the Shoe List screen without adding the shoe to the inventory.</string>
+    <string name="go_to_shoe_list_button">Go to Shoe List</string>
+    <string name="shoeList">Shoe List</string>
+    <string name="shoe_list_title">Shoe List</string>
+    <string name="add_new_shoe">Add New Shoe</string>
+    <string name="add_shoe">Add Shoe</string>
+    <string name="list_of_shoe_inventory">List of Shoe Inventory</string>
+    <string name="logout">Logout</string>
+    <string name="add_shoe_text">Add Shoe</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="enter_shoe_name">Enter Shoe Name</string>
+    <string name="shoe_company">Company</string>
+    <string name="enter_shoe_size">Enter Shoe Size</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="description">Description</string>
+    <string name="enter_shoe_company">Enter Shoe Company</string>
+    <string name="enter_shoe_description">Enter Shoe Description</string>
+    <string name="shoe_item">%1$s\n%2$s\nSize: %3$.1f\nDescription: %4$s\n\n</string>
 </resources>
