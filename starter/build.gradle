@@ -1,14 +1,22 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = '1.8.0'
+//    ext.kotlin_version = '1.8.0'
+    ext {
+        version_kotlin = '1.9.22'
+        version_core = '1.12.0'
+        version_lifecycle_extensions = "2.6.2"
+        version_material = '1.11.0' // as of December 27, 2023
+        // https://material.io/blog/android-stable-release-1-9-0
+        version_navigation = '2.7.6'
+    }
     repositories {
         mavenCentral()
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.5.3"
+        classpath 'com.android.tools.build:gradle:8.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$version_kotlin"
+//        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:version_navigation"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
