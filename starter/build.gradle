@@ -2,7 +2,7 @@
 buildscript {
     ext {
         kotlin_version = '1.8.0'
-        version_navigation = '2.7.7'
+        version_navigation = '2.5.3'
     }
     repositories {
         mavenCentral()

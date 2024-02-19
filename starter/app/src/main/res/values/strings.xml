@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="app_name_display">Shoe Store</string>
+    <string name="hello_blank_fragment">Hello login fragment</string>
+    <string name="login_email_hint">Enter your email here…</string>
+    <string name="login_password_hint">Password…</string>
+    <string name="login_button">Login</string>
+    <string name="onboard_greeting">Welcome, %1$s!</string>
 </resources>
