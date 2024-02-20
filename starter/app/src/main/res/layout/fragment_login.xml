@@ -55,7 +55,7 @@
 
         <Button
             android:id="@+id/login_button"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/login_button"
             app:layout_constraintBottom_toBottomOf="parent"
