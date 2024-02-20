@@ -18,5 +18,14 @@
         android:id="@+id/onboardFragment"
         android:name="com.udacity.shoestore.OnboardFragment"
         android:label="fragment_onboard"
-        tools:layout="@layout/fragment_onboard" />
+        tools:layout="@layout/fragment_onboard" >
+        <action
+            android:id="@+id/action_onboardFragment_to_onboardInstructionFragment"
+            app:destination="@id/onboardInstructionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardInstructionFragment"
+        android:name="com.udacity.shoestore.OnboardInstructionFragment"
+        android:label="fragment_onboard_instruction"
+        tools:layout="@layout/fragment_onboard_instruction" />
 </navigation>

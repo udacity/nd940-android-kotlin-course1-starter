@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.udacity.shoestore.databinding.FragmentOnboardBinding
 import java.lang.String
 
@@ -24,6 +25,10 @@ class OnboardFragment : Fragment() {
             greetingText.text = String.format(res.getString(R.string.onboard_greeting), "Hiep")
             greetingText.setTextColor(Color.parseColor("#bdbdbd"))
         }
+
+        binding.nextButton.setOnClickListener (
+            Navigation.createNavigateOnClickListener(R.id.action_onboardFragment_to_onboardInstructionFragment)
+        )
 
         return binding.root
     }
