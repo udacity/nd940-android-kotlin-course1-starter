@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">ShoeStore</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="login_email">Enter your email</string>
     <string name="email_label">Enter your email</string>
     <string name="email_hint" />
     <string name="password_label">Enter your password</string>
     <string name="password_hint" />
+    <string name="welcome">Welcome!</string>
+    <string name="about_this_app">About this app: This was made as part of udacity\'s android microdegree.
+        It mocks a shoe store app and showcases android design elements</string>
+    <string name="welcome_button">Accept and continue</string>
 </resources>

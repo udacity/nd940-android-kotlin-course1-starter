@@ -5,10 +5,36 @@
     android:layout_height="match_parent"
     tools:context=".welcome_destination">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!--
+    6. Create a new Welcome screen destination that includes:
+   * A new layout
+   * At least 2 textviews
+   * A navigation button with actions to navigate to the instructions screen -->
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="placeholder" />
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/welcome" />
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_this_app" />
+
+        <Button
+            android:id="@+id/welcome_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_button" />
+    </LinearLayout>
 
 </FrameLayout>

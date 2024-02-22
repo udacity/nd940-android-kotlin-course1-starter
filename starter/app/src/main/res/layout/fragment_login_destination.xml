@@ -6,15 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".login_destination">
 
-    <!-- Create a new Login destination.
-
+    <!--
+    Create a new Login destination.
    * Include email and password labels
+    - Include email and password fields
+    - Create buttons for creating a new login and logging in with an existing account
+    - Clicking either button should navigate to the Welcome Screen.-->
 
-   - Include email and password fields
-   - Create buttons for creating a new login and logging in with an existing account
-   - Clicking either button should navigate to the Welcome Screen.-->
-
-    <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_layout"
         android:layout_width="match_parent"
