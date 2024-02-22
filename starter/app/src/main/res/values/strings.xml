@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="login_email">Enter your email</string>
+    <string name="email_label">Enter your email</string>
+    <string name="email_hint" />
+    <string name="password_label">Enter your password</string>
+    <string name="password_hint" />
 </resources>

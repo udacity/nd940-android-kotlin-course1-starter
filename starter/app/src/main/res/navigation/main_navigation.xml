@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/login_destination">
+
+    <fragment
+        android:id="@+id/login_destination"
+        android:name="com.udacity.shoestore.login_destination"
+        android:label="fragment_login_destination"
+        tools:layout="@layout/fragment_login_destination" >
+        <action
+            android:id="@+id/action_login_destination_to_welcome_destination"
+            app:destination="@id/welcome_destination" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome_destination"
+        android:name="com.udacity.shoestore.welcome_destination"
+        android:label="fragment_welcome_destination"
+        tools:layout="@layout/fragment_welcome_destination" >
+        <action
+            android:id="@+id/action_welcome_destination_to_instruction_destination"
+            app:destination="@id/instruction_destination" />
+    </fragment>
+    <fragment
+        android:id="@+id/instruction_destination"
+        android:name="com.udacity.shoestore.instruction_destination"
+        android:label="fragment_instruction_destination"
+        tools:layout="@layout/fragment_instruction_destination" />
+</navigation>
