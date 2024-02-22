@@ -9,4 +9,7 @@
     <string name="login_button">Login with an existing account</string>
     <string name="login_new_button">New Login</string>
     <string name="onboard_greeting">Welcome, %1$s!</string>
+    <string name="onboard_screen_title">Onboard screen</string>
+    <string name="instruction_screen_title">Instruction screen</string>
+    <string name="button_next">Next</string>
 </resources>

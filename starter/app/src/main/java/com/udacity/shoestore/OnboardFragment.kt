@@ -23,7 +23,6 @@ class OnboardFragment : Fragment() {
         binding.apply {
             val res = resources
             greetingText.text = String.format(res.getString(R.string.onboard_greeting), "Hiep")
-            greetingText.setTextColor(Color.parseColor("#bdbdbd"))
         }
 
         binding.nextButton.setOnClickListener (
