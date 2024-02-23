@@ -17,30 +17,26 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/tool_bar"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                app:title="menu"
+                app:menu="@menu/menu">
 
-                <com.google.android.material.navigation.NavigationView
-                    android:id="@+id/navView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="start"
-                    app:menu="@menu/menu" />
+                <!--                <com.google.android.material.navigation.NavigationView-->
+                <!--                    android:id="@+id/navView"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_gravity="start" />-->
 
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
 
-        <LinearLayout
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/myNavHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".screens.MainActivity">
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/navigation" />
 
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/myNavHostFragment"
-                android:name="androidx.navigation.fragment.NavHostFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:defaultNavHost="true"
-                app:navGraph="@navigation/navigation" />
-        </LinearLayout>
     </LinearLayout>
 </layout>
