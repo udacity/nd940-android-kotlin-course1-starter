@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.Shoe
 
 class ShoeListingViewModel : ViewModel() {
-    val shoeList = MutableLiveData<MutableList<Shoe>>()
+    val shoeList = MutableLiveData<MutableList<Shoe>>(mutableListOf())
 
     init {
         addShoe(Shoe("Shoe A",20.0,"Adidas", "This is a Adidas Shoe"))

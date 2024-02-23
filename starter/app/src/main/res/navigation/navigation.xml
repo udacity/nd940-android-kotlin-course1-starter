@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/onboardFragment"
-        android:name="com.udacity.shoestore.screens.OnboardFragment"
+        android:name="com.udacity.shoestore.screens.onboard.OnboardFragment"
         android:label="fragment_onboard"
         tools:layout="@layout/fragment_onboard" >
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/onboardInstructionFragment"
-        android:name="com.udacity.shoestore.screens.OnboardInstructionFragment"
+        android:name="com.udacity.shoestore.screens.onboard.OnboardInstructionFragment"
         android:label="fragment_onboard_instruction"
         tools:layout="@layout/fragment_onboard_instruction" >
         <action

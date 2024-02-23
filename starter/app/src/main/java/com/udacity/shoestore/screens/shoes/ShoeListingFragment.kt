@@ -1,6 +1,7 @@
 package com.udacity.shoestore.screens.shoes
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -32,8 +33,9 @@ class ShoeListingFragment : Fragment() {
         viewModel.shoeList.observe(viewLifecycleOwner, Observer { shoes ->
             shoes.forEach { shoe: Shoe -> addShoeItem(shoe) }
         }
-        )
 
+        )
+        Log.d("HiepPT8","${viewModel.shoeList.value?.size}")
 
         binding.addButton.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_shoeListingFragment_to_shoeDetailEditingFragment)
