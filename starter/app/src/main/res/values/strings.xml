@@ -9,4 +9,7 @@
     <string name="about_this_app">About this app: This was made as part of udacity\'s android microdegree.
         It mocks a shoe store app and showcases android design elements</string>
     <string name="welcome_button">Accept and continue</string>
+    <string name="instruction_header">Instruction Header</string>
+    <string name="instruction_body">This is where the instructions for how to use the next page goes</string>
+    <string name="continue_button_text">Continue</string>
 </resources>
