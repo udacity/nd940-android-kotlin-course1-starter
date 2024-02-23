@@ -1,4 +1,4 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.Welcome
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.udacity.shoestore.R
 import timber.log.Timber
 
 class WelcomeFragment : Fragment() {

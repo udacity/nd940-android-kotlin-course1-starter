@@ -1,12 +1,11 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.Instructions
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
-import timber.log.Timber
+import com.udacity.shoestore.R
 
 class InstructionFragment  : Fragment() {
 

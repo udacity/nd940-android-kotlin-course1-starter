@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login_destination">
+    tools:context=".Login.login_destination">
 
     <!--
     Create a new Login destination.

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".welcome_destination">
+    tools:context=".Welcome.welcome_destination">
 
     <!--
     6. Create a new Welcome screen destination that includes:
