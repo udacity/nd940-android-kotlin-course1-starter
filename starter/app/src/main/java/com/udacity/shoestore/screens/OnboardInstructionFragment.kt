@@ -1,4 +1,4 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.screens
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentOnboardInstructionBinding
-import java.lang.String
 
 class OnboardInstructionFragment : Fragment() {
     override fun onCreateView(

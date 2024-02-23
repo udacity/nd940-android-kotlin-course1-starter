@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.udacity.shoestore.LoginFragment"
+        android:name="com.udacity.shoestore.screens.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/onboardFragment"
-        android:name="com.udacity.shoestore.OnboardFragment"
+        android:name="com.udacity.shoestore.screens.OnboardFragment"
         android:label="fragment_onboard"
         tools:layout="@layout/fragment_onboard" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/onboardInstructionFragment"
-        android:name="com.udacity.shoestore.OnboardInstructionFragment"
+        android:name="com.udacity.shoestore.screens.OnboardInstructionFragment"
         android:label="fragment_onboard_instruction"
         tools:layout="@layout/fragment_onboard_instruction" >
         <action
@@ -34,7 +34,20 @@
     </fragment>
     <fragment
         android:id="@+id/shoeListingFragment"
-        android:name="com.udacity.shoestore.ShoeListingFragment"
+        android:name="com.udacity.shoestore.screens.shoes.ShoeListingFragment"
         android:label="fragment_shoe_listing"
-        tools:layout="@layout/fragment_shoe_listing" />
+        tools:layout="@layout/fragment_shoe_listing" >
+        <action
+            android:id="@+id/action_shoeListingFragment_to_shoeDetailEditingFragment"
+            app:destination="@id/shoeDetailEditingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailEditingFragment"
+        android:name="com.udacity.shoestore.screens.shoes.ShoeDetailEditingFragment"
+        android:label="fragment_shoe_detail_editing"
+        tools:layout="@layout/fragment_shoe_detail_editing" >
+        <action
+            android:id="@+id/action_shoeDetailEditingFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment" />
+    </fragment>
 </navigation>

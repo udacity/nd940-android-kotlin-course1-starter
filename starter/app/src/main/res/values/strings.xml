@@ -2,6 +2,7 @@
     <string name="app_name">ShoeStore</string>
     <string name="app_name_display">Shoe Store</string>
     <string name="hello_blank_fragment">Hello login fragment</string>
+    <string name="menu_logout">Logout</string>
     <string name="login_email_label">Email</string>
     <string name="login_password_label">Password</string>
     <string name="login_email_hint">Enter your email here…</string>
@@ -12,4 +13,12 @@
     <string name="onboard_screen_title">Onboard screen</string>
     <string name="instruction_screen_title">Instruction screen</string>
     <string name="button_next">Next</string>
+    <string name="list_shoe_screen_title">Shoe List</string>
+    <string name="shoe_detail_screen_title">Add Shoe</string>
+    <string name="shoe_name_text_edit_hint">Shoe name…</string>
+    <string name="shoe_size_text_edit_hint">Size…</string>
+    <string name="shoe_company_text_edit_hint">Company…</string>
+    <string name="shoe_description_text_edit_hint">Description…</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="save_button">Save</string>
 </resources>
