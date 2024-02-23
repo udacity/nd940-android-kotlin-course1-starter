@@ -1,25 +1,22 @@
-package com.udacity.shoestore.screens
+package com.udacity.shoestore
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.get
+import androidx.navigation.navOptions
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.ActivityMainBinding
+import com.udacity.shoestore.viewmodels.ShoeListingViewModel
 
 
 class MainActivity : AppCompatActivity() {
@@ -44,10 +41,11 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBar)
         NavigationUI.setupActionBarWithNavController(this, navController)
 //        NavigationUI.setupWithNavController(binding.navView, navController)
-        navController.addOnDestinationChangedListener{ nc: NavController, navDestination: NavDestination, _ ->
+        navController.addOnDestinationChangedListener{ _, navDestination: NavDestination, _ ->
 
             when (navDestination.id) {
                 R.id.shoeListingFragment -> toggleSupportActionBar(true)
+                R.id.shoeDetailEditingFragment -> toggleSupportActionBar(true)
                 else -> toggleSupportActionBar(false)
             }
 
@@ -55,13 +53,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.shoeDetailEditingFragment -> toggleUpButton(true)
                 else -> toggleUpButton(false)
             }
-//
-//            if (navDestination.id == R.id.onboardFragment) {
-//                supportActionBar?.setDisplayHomeAsUpEnabled(false)
-//            } else {
-//                supportActionBar?.setDisplayHomeAsUpEnabled(true)
-//            }
-
         }
     }
 
@@ -71,15 +62,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        if (navController.currentDestination?.id == R.id.shoeListingFragment ) {
-            menuInflater.inflate(R.menu.menu, menu)
-        }
+        menuInflater.inflate(R.menu.menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.logout_action) {
-            navController.popBackStack(R.id.loginFragment, false)
+            navController.navigate(R.id.loginFragment, null, navOptions = navOptions {
+                this.popUpTo(R.id.shoeListingFragment){
+                    inclusive = true
+                }
+            })
         }
         return super.onOptionsItemSelected(item)
     }

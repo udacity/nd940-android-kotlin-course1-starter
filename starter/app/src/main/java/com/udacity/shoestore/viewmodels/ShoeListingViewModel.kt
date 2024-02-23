@@ -1,4 +1,4 @@
-package com.udacity.shoestore.screens
+package com.udacity.shoestore.viewmodels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

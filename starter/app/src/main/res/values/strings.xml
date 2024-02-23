@@ -21,4 +21,5 @@
     <string name="shoe_description_text_edit_hint">Description…</string>
     <string name="cancel_button">Cancel</string>
     <string name="save_button">Save</string>
+    <string name="instruction_text">Press \"Next\" to proceed, at shoe listing screen, you can tap but \"+\" to add more shoe</string>
 </resources>

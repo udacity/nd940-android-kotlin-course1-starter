@@ -6,7 +6,7 @@
     
     <data>
         <variable
-            name="Shoe"
+            name="shoe"
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
@@ -21,6 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/shoe_detail_screen_title"
+            android:textSize="@dimen/title_text_size"
             app:layout_constraintBottom_toTopOf="@+id/shoe_name_text_field"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +37,7 @@
             android:hint="@string/shoe_name_text_edit_hint"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text="@={Shoe.name}"
+            android:text="@={shoe.name}"
             app:layout_constraintBottom_toTopOf="@+id/company_text_field"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +52,7 @@
             android:hint="@string/shoe_company_text_edit_hint"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text="@={Shoe.company}"
+            android:text="@={shoe.company}"
             app:layout_constraintBottom_toTopOf="@+id/shoe_size_text_field"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +67,7 @@
             android:hint="@string/shoe_size_text_edit_hint"
             android:inputType="number"
             android:minHeight="48dp"
-            android:text="@={`` + Shoe.size}"
+            android:text=""
             app:layout_constraintBottom_toTopOf="@+id/description_text_field"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +82,7 @@
             android:hint="@string/shoe_description_text_edit_hint"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text="@={Shoe.description}"
+            android:text="@={shoe.description}"
             app:layout_constraintBottom_toTopOf="@+id/group_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

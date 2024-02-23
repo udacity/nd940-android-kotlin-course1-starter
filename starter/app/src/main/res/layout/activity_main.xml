@@ -20,13 +20,6 @@
                 android:layout_height="wrap_content"
                 app:title="menu"
                 app:menu="@menu/menu">
-
-                <!--                <com.google.android.material.navigation.NavigationView-->
-                <!--                    android:id="@+id/navView"-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="match_parent"-->
-                <!--                    android:layout_gravity="start" />-->
-
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
 

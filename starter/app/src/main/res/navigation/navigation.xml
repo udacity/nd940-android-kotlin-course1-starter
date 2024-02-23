@@ -23,7 +23,9 @@
         tools:layout="@layout/fragment_onboard" >
         <action
             android:id="@+id/action_onboardFragment_to_onboardInstructionFragment"
-            app:destination="@id/onboardInstructionFragment" />
+            app:destination="@id/onboardInstructionFragment"
+            app:popUpTo="@id/onboardFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/onboardInstructionFragment"
@@ -32,7 +34,9 @@
         tools:layout="@layout/fragment_onboard_instruction" >
         <action
             android:id="@+id/action_onboardInstructionFragment_to_shoeListingFragment"
-            app:destination="@id/shoeListingFragment" />
+            app:destination="@id/shoeListingFragment"
+            app:popUpTo="@id/onboardInstructionFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/shoeListingFragment"
