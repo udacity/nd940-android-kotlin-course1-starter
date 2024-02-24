@@ -5,6 +5,10 @@
     android:id="@+id/main_navigation"
     app:startDestination="@id/login_destination">
 
+    <action android:id="@+id/action_global_login_destination"
+        app:destination="@id/login_destination" />
+
+
     <fragment
         android:id="@+id/login_destination"
         android:name="com.udacity.shoestore.Login.LoginFragment"
@@ -37,5 +41,18 @@
         android:id="@+id/shoeFragment"
         android:name="com.udacity.shoestore.shoe.ShoeFragment"
         android:label="fragment_shoe_list"
-        tools:layout="@layout/fragment_shoe" />
+        tools:layout="@layout/fragment_shoe" >
+        <action
+            android:id="@+id/action_shoeFragment_to_shoeDetailFragment"
+            app:destination="@id/shoeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailFragment"
+        android:name="com.udacity.shoestore.shoe.ShoeDetailFragment"
+        android:label="fragment_shoe_detail"
+        tools:layout="@layout/fragment_shoe_detail" >
+        <action
+            android:id="@+id/action_shoeDetailFragment_to_shoeFragment"
+            app:destination="@id/shoeFragment" />
+    </fragment>
 </navigation>

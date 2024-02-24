@@ -6,9 +6,14 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.udacity.shoestore.R
 
 /**
@@ -22,7 +27,9 @@ class ShoeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ShoeViewModel::class.java)
+        setHasOptionsMenu(true)
+
+        viewModel = ViewModelProvider(this)[ShoeViewModel::class.java]
         arguments?.let {
             columnCount = it.getInt(ARG_COLUMN_COUNT)
         }
@@ -49,13 +56,40 @@ class ShoeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        if (view is RecyclerView) {
-            viewModel.shoes.observe(viewLifecycleOwner) { shoes ->
-                // Update the adapter with the observed data
-                (view.adapter as MyShoeRecyclerViewAdapter).updateShoes(shoes)
+        val addShoeButton: FloatingActionButton = view.findViewById(R.id.fab_add_shoe)
+        addShoeButton.setOnClickListener{
+            findNavController().navigate(R.id.action_shoeFragment_to_shoeDetailFragment)
+        }
+        val recyclerView: RecyclerView = view.findViewById(R.id.list)
+        recyclerView.let {
+            it.layoutManager = when {
+                columnCount <= 1 -> LinearLayoutManager(context)
+                else -> GridLayoutManager(context, columnCount)
             }
+            it.adapter = MyShoeRecyclerViewAdapter(mutableListOf())
+        }
+        viewModel.shoes.observe(viewLifecycleOwner) { shoes ->
+                // Update the adapter with the observed data
+                (recyclerView.adapter as MyShoeRecyclerViewAdapter).updateShoes(shoes)
         }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.shoe_list_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.logout -> {
+                // Navigate back to the login screen
+                findNavController().navigate(R.id.action_global_login_destination)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
     companion object {
 
         // TODO: Customize parameter argument names

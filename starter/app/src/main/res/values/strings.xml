@@ -14,4 +14,6 @@
     <string name="continue_button_text">Continue</string>
     <string name="add_shoe">Add a new shoe!</string>
     <string name="logout">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
