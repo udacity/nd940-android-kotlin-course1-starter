@@ -20,8 +20,8 @@ class WelcomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_welcome_destination, container, false)
         val loginButton: Button = view.findViewById(R.id.welcome_button)
         loginButton.setOnClickListener {
-            Timber.d("Login button clicked")
-            findNavController().navigate(R.id.action_welcome_destination_to_instructionDestination)
+            Timber.d("Welcome button clicked")
+            findNavController().navigate(R.id.action_welcome_destination_to_instruction_destination)
         }
 
         return view

@@ -12,4 +12,6 @@
     <string name="instruction_header">Instruction Header</string>
     <string name="instruction_body">This is where the instructions for how to use the next page goes</string>
     <string name="continue_button_text">Continue</string>
+    <string name="add_shoe">Add a new shoe!</string>
+    <string name="logout">Logout</string>
 </resources>

@@ -19,13 +19,23 @@
         android:name="com.udacity.shoestore.Welcome.WelcomeFragment"
         android:label="fragment_welcome_destination"
         tools:layout="@layout/fragment_welcome_destination" >
+
         <action
-            android:id="@+id/action_welcome_destination_to_instructionDestination"
+            android:id="@+id/action_welcome_destination_to_instruction_destination"
             app:destination="@id/instruction_destination" />
     </fragment>
     <fragment
         android:id="@+id/instruction_destination"
-        android:name="com.udacity.shoestore.Instructions.Instruction_destination"
+        android:name="com.udacity.shoestore.Instructions.InstructionFragment"
         android:label="fragment_instruction_destination"
-        tools:layout="@layout/fragment_instruction_destination" />
+        tools:layout="@layout/fragment_instruction_destination">
+        <action
+            android:id="@+id/action_instruction_destination_to_shoeFragment"
+            app:destination="@id/shoeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeFragment"
+        android:name="com.udacity.shoestore.shoe.ShoeFragment"
+        android:label="fragment_shoe_list"
+        tools:layout="@layout/fragment_shoe" />
 </navigation>
