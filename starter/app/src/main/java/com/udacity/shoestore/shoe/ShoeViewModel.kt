@@ -20,8 +20,12 @@ class ShoeViewModel : ViewModel() {
     val shoeDescription = MutableLiveData<String?>()
 
     private val _eventShoeAdded = MutableLiveData<Boolean>()
+    private val _navigateBack = MutableLiveData<Boolean>()
     val eventShoeAdded: LiveData<Boolean>
         get() = _eventShoeAdded
+
+    val navigateBack: LiveData<Boolean>
+        get() = _navigateBack
 
     // Function to add a new shoe to the list
     fun addShoe() {
@@ -55,5 +59,17 @@ class ShoeViewModel : ViewModel() {
         shoeCompany.value = null
         shoeDescription.value = null
     }
+    fun onSaveClicked() {
+        addShoe() // Your existing logic
+    }
+
+    fun onCancelClicked() {
+        _navigateBack.value = true
+    }
+    fun onNavigationDone() {
+        _navigateBack.value = false
+    }
+
+
 
 }

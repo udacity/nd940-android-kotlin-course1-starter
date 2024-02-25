@@ -40,6 +40,14 @@ class ShoeDetailFragment : Fragment() {
             }
         }
 
+        viewModel.navigateBack.observe(viewLifecycleOwner) { shouldNavigateBack ->
+            if (shouldNavigateBack) {
+                findNavController().popBackStack()
+                viewModel.onNavigationDone()
+            }
+        }
+
+
         binding.saveButton.setOnClickListener {
             viewModel.addShoe()
             //saveShoe()

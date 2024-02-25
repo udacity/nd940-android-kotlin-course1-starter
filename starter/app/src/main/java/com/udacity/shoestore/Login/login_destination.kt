@@ -10,8 +10,6 @@ import com.udacity.shoestore.R
 
 /**
  * A simple [Fragment] subclass.
- * Use the [login_destination.newInstance] factory method to
- * create an instance of this fragment.
  */
 class login_destination : Fragment() {
 

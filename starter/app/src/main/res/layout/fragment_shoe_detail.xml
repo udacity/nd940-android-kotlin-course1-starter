@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
         <variable
@@ -84,14 +82,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/cancel_button"
-            android:onClick="navigateBack" />
+            android:onClick="@{() -> viewModel.onCancelClicked()}" />
 
         <Button
             android:id="@+id/saveButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/save_button"
-            android:onClick="saveShoe" />
+            android:onClick="@{() -> viewModel.onSaveClicked()}" />
+
     </LinearLayout>
 </ScrollView>
 </layout>
