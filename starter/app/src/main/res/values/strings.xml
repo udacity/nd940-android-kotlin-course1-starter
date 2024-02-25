@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="login_email">Enter your email</string>
+    <string name="email_label">Enter your email</string>
+    <string name="email_hint" />
+    <string name="password_label">Enter your password</string>
+    <string name="password_hint" />
+    <string name="welcome">Welcome!</string>
+    <string name="about_this_app">About this app: This was made as part of udacity\'s android microdegree.
+        It mocks a shoe store app and showcases android design elements</string>
+    <string name="welcome_button">Accept and continue</string>
+    <string name="instruction_header">Instruction Header</string>
+    <string name="instruction_body">How to use the list: Please add a shoe with the button in the lower right corner.
+        This will open a new screen where you can give a shoe name, company, size, and description.
+        Once you have entered the information click save to add the new shoe to the list.
+        You can also click the cancel button to return without adding a shoe.
+        To return to the login screen, please click the three dots in the top right corner and
+        select "Logout" </string>
+    <string name="continue_button_text">Continue</string>
+    <string name="add_shoe">Add a new shoe!</string>
+    <string name="logout">Logout</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="enter_shoe_name_hint">Enter shoe name</string>
+    <string name="shoe_company">Company</string>
+    <string name="enter_company">Enter company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="enter_shoe_size">Enter shoe size</string>
+    <string name="shoe_description">Description</string>
+    <string name="enter_description">Enter description</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="save_button">Save</string>
+    <string name="login">Login</string>
+    <string name="new_user">New User</string>
 </resources>
