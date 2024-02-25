@@ -13,6 +13,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="64dp"
         app:layoutManager="LinearLayoutManager"
         tools:listitem="@layout/fragment_shoe" />
 
