@@ -32,7 +32,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/enter_shoe_name_hint"
             android:textSize="48sp"
-            android:text="@={viewModel.shoeName}"/>
+            android:text="@={viewModel.shoeName}"
+            android:inputType="text"
+            android:autofillHints="" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,7 +46,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/enter_company"
             android:textSize="48sp"
-            android:text="@={viewModel.shoeCompany}"/>
+            android:text="@={viewModel.shoeCompany}"
+            android:inputType="text"
+            android:autofillHints="" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -57,7 +61,8 @@
             android:hint="@string/enter_shoe_size"
             android:inputType="number"
             android:textSize="48sp"
-            android:text="@={viewModel.shoeSize}"/>
+            android:text="@={viewModel.shoeSize}"
+            android:autofillHints="" />
 
 
         <TextView
@@ -70,7 +75,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/enter_description"
             android:textSize="48sp"
-            android:text="@={viewModel.shoeDescription}"/>
+            android:text="@={viewModel.shoeDescription}"
+            android:inputType="text"
+            android:autofillHints="" />
 
         <Button
             android:id="@+id/cancelButton"

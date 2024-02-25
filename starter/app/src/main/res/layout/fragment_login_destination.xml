@@ -49,7 +49,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/email_label"
             tools:layout_conversion_absoluteHeight="48dp"
-            tools:layout_conversion_absoluteWidth="379dp" />
+            tools:layout_conversion_absoluteWidth="379dp"
+            android:autofillHints="" />
 
         <TextView
             android:id="@+id/password_label"
@@ -73,7 +74,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password_label"
             tools:layout_conversion_absoluteHeight="48dp"
-            tools:layout_conversion_absoluteWidth="379dp" />
+            tools:layout_conversion_absoluteWidth="379dp"
+            android:autofillHints="" />
 
 
         <Button
@@ -81,7 +83,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Login"
+            android:text="@string/login"
             app:layout_constraintEnd_toStartOf="@+id/new_login"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password"
@@ -93,7 +95,7 @@
             android:id="@+id/new_login"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="New User"
+            android:text="@string/new_user"
             app:layout_constraintBottom_toBottomOf="@+id/login_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/login_button"

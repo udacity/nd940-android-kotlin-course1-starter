@@ -26,4 +26,6 @@
     <string name="enter_description">Enter description</string>
     <string name="cancel_button">Cancel</string>
     <string name="save_button">Save</string>
+    <string name="login">Login</string>
+    <string name="new_user">New User</string>
 </resources>
