@@ -16,4 +16,14 @@
     <string name="logout">Logout</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="enter_shoe_name_hint">Enter shoe name</string>
+    <string name="shoe_company">Company</string>
+    <string name="enter_company">Enter company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="enter_shoe_size">Enter shoe size</string>
+    <string name="shoe_description">Description</string>
+    <string name="enter_description">Enter description</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="save_button">Save</string>
 </resources>
