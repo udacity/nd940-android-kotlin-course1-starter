@@ -86,3 +86,6 @@ This menu will appear only on the Shoe Listing screen and will return the user t
 
 
 ## License
+ Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
