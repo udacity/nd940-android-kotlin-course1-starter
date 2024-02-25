@@ -13,12 +13,47 @@ class ShoeViewModel : ViewModel() {
     // Public LiveData for observing the list of shoes from UI components
     val shoes: LiveData<MutableList<Shoe>> = _shoes
 
+    // Individual properties for the shoe being added/edited
+    val shoeName = MutableLiveData<String?>()
+    val shoeSize = MutableLiveData<String?>() // Keeping as String for easier two-way binding
+    val shoeCompany = MutableLiveData<String?>()
+    val shoeDescription = MutableLiveData<String?>()
+
+    private val _eventShoeAdded = MutableLiveData<Boolean>()
+    val eventShoeAdded: LiveData<Boolean>
+        get() = _eventShoeAdded
+
     // Function to add a new shoe to the list
-    fun addShoe(shoe: Shoe) {
-        // create a List of _shoes that use a MutableLiveData
-        val list = _shoes.value ?: mutableListOf()
-        list.add(shoe)
-        _shoes.value = list //notify all active observers
+    fun addShoe() {
+        val name = shoeName.value ?: ""
+        val size = shoeSize.value?.toDoubleOrNull() ?: 0.0
+        val company = shoeCompany.value ?: ""
+        val description = shoeDescription.value ?: ""
+
+        if (name.isNotBlank() && size > 0 && company.isNotBlank()) {
+            val newShoe = Shoe(name, size, company, description)
+            val list = _shoes.value ?: mutableListOf()
+            list.add(newShoe)
+            _shoes.value = list
+            _eventShoeAdded.value = true
+        } else {
+            // Handle validation error
+        }
+
+        // Reset fields after adding
+        resetShoeFields()
+    }
+
+    // Call this method after navigating back to reset the event state
+    fun onShoeAddedComplete() {
+        _eventShoeAdded.value = false
+    }
+
+    private fun resetShoeFields() {
+        shoeName.value = null
+        shoeSize.value = null
+        shoeCompany.value = null
+        shoeDescription.value = null
     }
 
 }

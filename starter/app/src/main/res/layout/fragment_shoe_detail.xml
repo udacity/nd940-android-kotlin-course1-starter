@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.shoe.ShoeViewModel" />
+    </data>
+
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -16,12 +25,14 @@
             android:layout_height="wrap_content"
             android:text="@string/shoe_name"
             android:layout_marginTop="48dp"/>
+
         <EditText
             android:id="@+id/shoeNameEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_shoe_name_hint"
-            android:textSize="48sp"/>
+            android:textSize="48sp"
+            android:text="@={viewModel.shoeName}"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,7 +43,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_company"
-            android:textSize="48sp"/>
+            android:textSize="48sp"
+            android:text="@={viewModel.shoeCompany}"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,7 +56,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/enter_shoe_size"
             android:inputType="number"
-            android:textSize="48sp"/>
+            android:textSize="48sp"
+            android:text="@={viewModel.shoeSize}"/>
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -55,7 +69,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_description"
-            android:textSize="48sp"/>
+            android:textSize="48sp"
+            android:text="@={viewModel.shoeDescription}"/>
 
         <Button
             android:id="@+id/cancelButton"
@@ -72,3 +87,4 @@
             android:onClick="saveShoe" />
     </LinearLayout>
 </ScrollView>
+</layout>

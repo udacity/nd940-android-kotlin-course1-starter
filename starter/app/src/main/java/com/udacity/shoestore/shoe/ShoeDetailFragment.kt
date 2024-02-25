@@ -30,8 +30,20 @@ class ShoeDetailFragment : Fragment() {
 
         viewModel = ViewModelProvider(requireActivity())[ShoeViewModel::class.java]
 
+        binding.viewModel = viewModel
+
+        binding.lifecycleOwner = viewLifecycleOwner
+
+        viewModel.eventShoeAdded.observe(viewLifecycleOwner) { isAdded ->
+            if (isAdded) {
+                findNavController().popBackStack()
+                viewModel.onShoeAddedComplete()
+            }
+        }
+
         binding.saveButton.setOnClickListener {
-            saveShoe()
+            viewModel.addShoe()
+            //saveShoe()
         }
 
         binding.cancelButton.setOnClickListener {
@@ -39,7 +51,9 @@ class ShoeDetailFragment : Fragment() {
         }
     }
 
-    private fun saveShoe() {
+    /*private fun saveShoe() {
+
+
         val name = binding.shoeNameEdit.text.toString()
         val size = binding.shoeSizeEdit.text.toString().toDoubleOrNull() ?: 0.0
         val company = binding.companyEdit.text.toString()
@@ -48,11 +62,12 @@ class ShoeDetailFragment : Fragment() {
         if (name.isNotBlank() && size > 0 && company.isNotBlank()) {
             val newShoe = Shoe(name, size, company, description)
             viewModel.addShoe(newShoe)
-            findNavController().popBackStack()
+            //findNavController().popBackStack()
         } else {
             // Show error to user, fields are not correctly filled
         }
     }
+    */
 
     override fun onDestroyView() {
         super.onDestroyView()
