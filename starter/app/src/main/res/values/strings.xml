@@ -10,11 +10,15 @@
         It mocks a shoe store app and showcases android design elements</string>
     <string name="welcome_button">Accept and continue</string>
     <string name="instruction_header">Instruction Header</string>
-    <string name="instruction_body">This is where the instructions for how to use the next page goes</string>
+    <string name="instruction_body">How to use the list: Please add a shoe with the button in the lower right corner.
+        This will open a new screen where you can give a shoe name, company, size, and description.
+        Once you have entered the information click save to add the new shoe to the list.
+        You can also click the cancel button to return without adding a shoe.
+        To return to the login screen, please click the three dots in the top right corner and
+        select "Logout" </string>
     <string name="continue_button_text">Continue</string>
     <string name="add_shoe">Add a new shoe!</string>
     <string name="logout">Logout</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="shoe_name">Shoe Name</string>
     <string name="enter_shoe_name_hint">Enter shoe name</string>
