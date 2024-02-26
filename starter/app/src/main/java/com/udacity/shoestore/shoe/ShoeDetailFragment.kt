@@ -50,7 +50,6 @@ class ShoeDetailFragment : Fragment() {
 
         binding.saveButton.setOnClickListener {
             viewModel.addShoe()
-            //saveShoe()
         }
 
         binding.cancelButton.setOnClickListener {
@@ -58,23 +57,6 @@ class ShoeDetailFragment : Fragment() {
         }
     }
 
-    /*private fun saveShoe() {
-
-
-        val name = binding.shoeNameEdit.text.toString()
-        val size = binding.shoeSizeEdit.text.toString().toDoubleOrNull() ?: 0.0
-        val company = binding.companyEdit.text.toString()
-        val description = binding.descriptionEdit.text.toString()
-
-        if (name.isNotBlank() && size > 0 && company.isNotBlank()) {
-            val newShoe = Shoe(name, size, company, description)
-            viewModel.addShoe(newShoe)
-            //findNavController().popBackStack()
-        } else {
-            // Show error to user, fields are not correctly filled
-        }
-    }
-    */
 
     override fun onDestroyView() {
         super.onDestroyView()

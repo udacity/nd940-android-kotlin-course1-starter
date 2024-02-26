@@ -3,11 +3,13 @@ package com.udacity.shoestore.shoe
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.*
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.udacity.shoestore.R
+import com.udacity.shoestore.databinding.FragmentShoeBinding
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import com.udacity.shoestore.models.Shoe
 
 class ShoeFragment : Fragment() {
 
@@ -32,8 +34,6 @@ class ShoeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Setup RecyclerView
-        setupRecyclerView()
 
         // FAB click listener
         binding.fabAddShoe.setOnClickListener {
@@ -42,17 +42,26 @@ class ShoeFragment : Fragment() {
 
         // Observe ViewModel shoes list
         viewModel.shoes.observe(viewLifecycleOwner) { shoes ->
-            (binding.list.adapter as MyShoeRecyclerViewAdapter).updateShoes(shoes)
+            addShoeViews(shoes)
         }
     }
 
-    private fun setupRecyclerView() {
-        binding.list.apply {
-            layoutManager = LinearLayoutManager(context)
-            adapter = MyShoeRecyclerViewAdapter(mutableListOf())
+    private fun addShoeViews(shoes: List<Shoe>) {
+        // Clear existing views to avoid duplicates
+        binding.shoeListContainer.removeAllViews()
+
+        shoes.forEach { shoe ->
+            // Inflate a shoe view using DataBindingUtil if you're using Data Binding in your shoe item layout
+            val shoeItemBinding: FragmentShoeBinding = DataBindingUtil.inflate(
+                layoutInflater, R.layout.fragment_shoe, binding.shoeListContainer, false)
+
+            // Set shoe data to the binding
+            shoeItemBinding.shoe = shoe // Assuming you have a variable 'shoe' in your fragment_shoe.xml
+
+            // Add the bound view to the container
+            binding.shoeListContainer.addView(shoeItemBinding.root)
         }
     }
-
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.shoe_list_menu, menu)

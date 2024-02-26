@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+<LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -10,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:text="shoe name"
+        android:text= "@{shoe.name}"
         android:textAppearance="?attr/textAppearanceListItem" />
 
     <TextView
@@ -18,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:text="shoe size"
+        android:text='@{"" + shoe.size}'
         android:textAppearance="?attr/textAppearanceListItem" />
 
     <TextView
@@ -26,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:text="shoe company"
+        android:text="@{shoe.company}"
         android:textAppearance="?attr/textAppearanceListItem"/>
 
     <TextView
@@ -34,8 +42,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:text="shoe description"
+        android:text="@{shoe.description}"
         android:textAppearance="?attr/textAppearanceListItem" />
 
 
 </LinearLayout>
+</layout>
