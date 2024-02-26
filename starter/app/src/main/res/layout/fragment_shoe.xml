@@ -20,4 +20,22 @@
         android:layout_margin="@dimen/text_margin"
         android:text="shoe size"
         android:textAppearance="?attr/textAppearanceListItem" />
+
+    <TextView
+        android:id="@+id/shoeCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="shoe company"
+        android:textAppearance="?attr/textAppearanceListItem"/>
+
+    <TextView
+        android:id="@+id/shoeDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="shoe description"
+        android:textAppearance="?attr/textAppearanceListItem" />
+
+
 </LinearLayout>
