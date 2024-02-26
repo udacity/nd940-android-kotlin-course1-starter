@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--Used the main_navigation.xml to generate the start of this layout.
+Used a constraintlayout so that I could position the text, text inputs,
+and buttons relative to one another. This was the first layout I built
+in this project.
+
+Here are the requirements for this page:
+Create a new Login destination.
+    Include email and password labels
+    Include email and password fields
+    Create buttons for creating a new login and logging in with an existing account
+    Clicking either button should navigate to the Welcome Screen
+-->
+
+
+
+
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,12 +26,7 @@
         android:layout_height="match_parent"
         tools:context=".Login.login_destination">
 
-    <!--
-    Create a new Login destination.
-   * Include email and password labels
-    - Include email and password fields
-    - Create buttons for creating a new login and logging in with an existing account
-    - Clicking either button should navigate to the Welcome Screen.-->
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_layout"

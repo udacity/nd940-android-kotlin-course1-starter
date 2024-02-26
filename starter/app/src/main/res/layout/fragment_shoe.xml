@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--
+    This layout was generated along with fragment_shoe_list.xml when I added
+    a new list destination in main_navigation
+    It displays the attributes of the shoe items.
+    I chose a liner layout for simplicity
+    Please see fragment_shoe_list.xml for the list where this view is displayed
+-->
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>

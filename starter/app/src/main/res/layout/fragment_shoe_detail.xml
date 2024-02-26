@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--Used the main_navigation.xml to generate the start of this layout.
+This layout uses a scrollview and linerLayout so that all the input fields are
+accessible even when the screen is rotated.
+The requirements for this layout are to create a new Shoe Detail destination that includes:
+    A new layout
+    A TextView label and EditView for the Shoe Name, Company, Shoe Size and Description
+    A Cancel button with an action to navigate back to the shoe list screen
+    A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the
+        Shoe View Model.
+-->
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
